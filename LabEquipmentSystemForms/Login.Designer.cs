@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.userLoginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentLoginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminLoginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -37,7 +37,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userLoginMenuItem,
+            this.studentLoginMenuItem,
             this.adminLoginMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -45,11 +45,11 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // userLoginMenuItem
+            // studentLoginMenuItem
             // 
-            this.userLoginMenuItem.Name = "userLoginMenuItem";
-            this.userLoginMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.userLoginMenuItem.Text = "User Login";
+            this.studentLoginMenuItem.Name = "studentLoginMenuItem";
+            this.studentLoginMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.studentLoginMenuItem.Text = "Student Login";
             // 
             // adminLoginMenuItem
             // 
@@ -80,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem userLoginMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentLoginMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminLoginMenuItem;
     }
 }
