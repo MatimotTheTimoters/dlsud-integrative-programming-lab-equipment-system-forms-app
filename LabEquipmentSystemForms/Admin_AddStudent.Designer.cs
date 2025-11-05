@@ -1,6 +1,6 @@
 ﻿namespace LabEquipmentSystemForms
 {
-    partial class FormAdminAddUser
+    partial class FormAdminAddStudent
     {
         /// <summary>
         /// Required designer variable.

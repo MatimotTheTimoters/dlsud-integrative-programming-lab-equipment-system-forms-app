@@ -69,11 +69,11 @@
     <Compile Include="Admin_Home.Designer.cs">
       <DependentUpon>Admin_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_AddUser.cs">
+    <Compile Include="Admin_AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_AddUser.Designer.cs">
-      <DependentUpon>Admin_AddUser.cs</DependentUpon>
+    <Compile Include="Admin_AddStudent.Designer.cs">
+      <DependentUpon>Admin_AddStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewRecords.cs">
       <SubType>Form</SubType>
@@ -101,8 +101,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin_AddUser.resx">
-      <DependentUpon>Admin_AddUser.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_AddStudent.resx">
+      <DependentUpon>Admin_AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Home.resx">
       <DependentUpon>Admin_Home.cs</DependentUpon>
