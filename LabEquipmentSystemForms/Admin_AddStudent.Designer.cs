@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblStudentID = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
+            this.btnSelectPicture = new System.Windows.Forms.Button();
+            this.cbCourse = new System.Windows.Forms.ComboBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.lblProfilePicture = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblStudentID = new System.Windows.Forms.Label();
             this.txtStudentId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pbProfilePicture = new System.Windows.Forms.PictureBox();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblCourse = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
-            this.cbCourse = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnSelectPicture = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -90,17 +90,108 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblStudentID
+            // btnSelectPicture
             // 
-            this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStudentID.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentID.Location = new System.Drawing.Point(3, 0);
-            this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(215, 92);
-            this.lblStudentID.TabIndex = 1;
-            this.lblStudentID.Text = "STUDENT ID";
-            this.lblStudentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSelectPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSelectPicture.AutoSize = true;
+            this.btnSelectPicture.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSelectPicture.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPicture.Location = new System.Drawing.Point(445, 107);
+            this.btnSelectPicture.Name = "btnSelectPicture";
+            this.btnSelectPicture.Size = new System.Drawing.Size(215, 61);
+            this.btnSelectPicture.TabIndex = 16;
+            this.btnSelectPicture.Text = "SELECT IMAGE";
+            this.btnSelectPicture.UseVisualStyleBackColor = true;
+            // 
+            // cbCourse
+            // 
+            this.cbCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbCourse.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCourse.FormattingEnabled = true;
+            this.cbCourse.Items.AddRange(new object[] {
+            "BIT"});
+            this.cbCourse.Location = new System.Drawing.Point(666, 295);
+            this.cbCourse.Name = "cbCourse";
+            this.cbCourse.Size = new System.Drawing.Size(215, 53);
+            this.cbCourse.TabIndex = 14;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(224, 297);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(215, 50);
+            this.txtLastName.TabIndex = 12;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(3, 297);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(215, 50);
+            this.txtFirstName.TabIndex = 11;
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(666, 184);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(215, 92);
+            this.lblCourse.TabIndex = 10;
+            this.lblCourse.Text = "COURSE";
+            this.lblCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(445, 184);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(215, 92);
+            this.lblGender.TabIndex = 9;
+            this.lblGender.Text = "GENDER";
+            this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(224, 184);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(215, 92);
+            this.lblLastName.TabIndex = 8;
+            this.lblLastName.Text = "LAST NAME";
+            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(3, 184);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(215, 92);
+            this.lblFirstName.TabIndex = 7;
+            this.lblFirstName.Text = "FIRST NAME";
+            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblProfilePicture
+            // 
+            this.lblProfilePicture.AutoSize = true;
+            this.lblProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblProfilePicture.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfilePicture.Location = new System.Drawing.Point(445, 0);
+            this.lblProfilePicture.Name = "lblProfilePicture";
+            this.lblProfilePicture.Size = new System.Drawing.Size(215, 92);
+            this.lblProfilePicture.TabIndex = 3;
+            this.lblProfilePicture.Text = "PROFILE PICTURE";
+            this.lblProfilePicture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPassword
             // 
@@ -114,17 +205,17 @@
             this.lblPassword.Text = "PASSWORD";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProfilePicture
+            // lblStudentID
             // 
-            this.lblProfilePicture.AutoSize = true;
-            this.lblProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblProfilePicture.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfilePicture.Location = new System.Drawing.Point(445, 0);
-            this.lblProfilePicture.Name = "lblProfilePicture";
-            this.lblProfilePicture.Size = new System.Drawing.Size(215, 92);
-            this.lblProfilePicture.TabIndex = 3;
-            this.lblProfilePicture.Text = "PROFILE PICTURE";
-            this.lblProfilePicture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStudentID.AutoSize = true;
+            this.lblStudentID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStudentID.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentID.Location = new System.Drawing.Point(3, 0);
+            this.lblStudentID.Name = "lblStudentID";
+            this.lblStudentID.Size = new System.Drawing.Size(215, 92);
+            this.lblStudentID.TabIndex = 1;
+            this.lblStudentID.Text = "STUDENT ID";
+            this.lblStudentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtStudentId
             // 
@@ -154,72 +245,6 @@
             this.pbProfilePicture.TabIndex = 6;
             this.pbProfilePicture.TabStop = false;
             // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(3, 184);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(215, 92);
-            this.lblFirstName.TabIndex = 7;
-            this.lblFirstName.Text = "FIRST NAME";
-            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(224, 184);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(215, 92);
-            this.lblLastName.TabIndex = 8;
-            this.lblLastName.Text = "LAST NAME";
-            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(445, 184);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(215, 92);
-            this.lblGender.TabIndex = 9;
-            this.lblGender.Text = "GENDER";
-            this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCourse
-            // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(666, 184);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(215, 92);
-            this.lblCourse.TabIndex = 10;
-            this.lblCourse.Text = "COURSE";
-            this.lblCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(3, 297);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(215, 50);
-            this.txtFirstName.TabIndex = 11;
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(224, 297);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(215, 50);
-            this.txtLastName.TabIndex = 12;
-            // 
             // cbGender
             // 
             this.cbGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -232,18 +257,6 @@
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(215, 53);
             this.cbGender.TabIndex = 13;
-            // 
-            // cbCourse
-            // 
-            this.cbCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbCourse.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Items.AddRange(new object[] {
-            "BIT"});
-            this.cbCourse.Location = new System.Drawing.Point(666, 295);
-            this.cbCourse.Name = "cbCourse";
-            this.cbCourse.Size = new System.Drawing.Size(215, 53);
-            this.cbCourse.TabIndex = 14;
             // 
             // flowLayoutPanel1
             // 
@@ -268,6 +281,7 @@
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "CREATE USER";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnClear
             // 
@@ -282,27 +296,14 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnSelectPicture
-            // 
-            this.btnSelectPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSelectPicture.AutoSize = true;
-            this.btnSelectPicture.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSelectPicture.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectPicture.Location = new System.Drawing.Point(445, 107);
-            this.btnSelectPicture.Name = "btnSelectPicture";
-            this.btnSelectPicture.Size = new System.Drawing.Size(215, 61);
-            this.btnSelectPicture.TabIndex = 16;
-            this.btnSelectPicture.Text = "SELECT IMAGE";
-            this.btnSelectPicture.UseVisualStyleBackColor = true;
-            // 
-            // FormAdminAddUser
+            // FormAdminAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormAdminAddUser";
+            this.Name = "FormAdminAddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New User";
             this.tableLayoutPanel1.ResumeLayout(false);
