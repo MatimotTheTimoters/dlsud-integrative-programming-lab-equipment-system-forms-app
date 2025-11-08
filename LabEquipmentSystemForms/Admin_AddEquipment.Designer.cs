@@ -30,7 +30,7 @@
         {
             this.txtEquipmentId = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblEquipmentID = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtPassword, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblEquipmentID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtEquipmentId, 1, 0);
@@ -80,14 +80,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // txtPassword
+            // txtName
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(224, 113);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(657, 50);
-            this.txtPassword.TabIndex = 3;
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(224, 113);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(657, 50);
+            this.txtName.TabIndex = 3;
             // 
             // lblName
             // 
@@ -124,6 +124,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCreate
             // 
@@ -136,6 +137,7 @@
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "CREATE";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -217,7 +219,7 @@
 
         private System.Windows.Forms.TextBox txtEquipmentId;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblEquipmentID;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
