@@ -62,28 +62,28 @@ namespace DataHelper
         }
 
         // Admin methods
-        public static bool AddStudent (string studentID, string password, string profilePicture, string firstName, string lastName, string gender, string course)
+        public static bool AddStudent(string studentID, string password, byte[] profilePicture, string firstName, string lastName, string gender, string course)
         {
             bool success = false;
 
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand addStudentCmd = new SqlCommand("Admin_AddStudent", sqlCon);
-                addStudentCmd.CommandType = CommandType.StoredProcedure;
 
-                addStudentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                addStudentCmd.Parameters.AddWithValue("@Password", password);
-                addStudentCmd.Parameters.AddWithValue("@ProfilePicture", profilePicture);
-                addStudentCmd.Parameters.AddWithValue("@FirstName", firstName);
-                addStudentCmd.Parameters.AddWithValue("@LastName", lastName);
-                addStudentCmd.Parameters.AddWithValue("@Gender", gender);
-                addStudentCmd.Parameters.AddWithValue("@Course", course);
-
-                int rowsAffected = addStudentCmd.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                using (SqlCommand addStudentCmd = new SqlCommand("Admin_AddStudent", sqlCon))
                 {
-                    success = true;
+                    addStudentCmd.CommandType = CommandType.StoredProcedure;
+
+                    addStudentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                    addStudentCmd.Parameters.AddWithValue("@Password", password);
+                    addStudentCmd.Parameters.Add("@ProfilePicture", SqlDbType.Image).Value = (object)profilePicture ?? DBNull.Value;
+                    addStudentCmd.Parameters.AddWithValue("@FirstName", firstName);
+                    addStudentCmd.Parameters.AddWithValue("@LastName", lastName);
+                    addStudentCmd.Parameters.AddWithValue("@Gender", gender);
+                    addStudentCmd.Parameters.AddWithValue("@Course", course);
+
+                    int rowsAffected = addStudentCmd.ExecuteNonQuery();
+                    success = rowsAffected > 0;
                 }
             }
 
@@ -103,6 +103,72 @@ namespace DataHelper
                 return dt;
             }
 
+        }
+
+        public static bool AddEquipment(string equipmentID, string name, int quantity, string description)
+        {
+            bool success = false;
+
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand addEquipmentCmd = new SqlCommand("Admin_AddEquipment", sqlCon);
+                addEquipmentCmd.CommandType = CommandType.StoredProcedure;
+
+                addEquipmentCmd.Parameters.AddWithValue("@EquipmentID", equipmentID);
+                addEquipmentCmd.Parameters.AddWithValue("@Name", name);
+                addEquipmentCmd.Parameters.AddWithValue("@Quantity", quantity);
+                addEquipmentCmd.Parameters.AddWithValue("@Description", description);
+
+                int rowsAffected = addEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
+
+        public static DataTable ViewEquipment()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("Admin_ViewEquipment", sqlCon);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
+
+        public static bool EditEquipment(
+            string oldEquipmentID, string newEquipmentID,
+            string oldName, string newName,
+            int oldQuantity, int newQuantity,
+            string oldDescription, string newDescription)
+        {
+            bool success = false;
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand editEquipmentCmd = new SqlCommand("Admin_EditEquipment", sqlCon);
+                editEquipmentCmd.CommandType = CommandType.StoredProcedure;
+
+                editEquipmentCmd.Parameters.AddWithValue("@OldEquipmentID", oldEquipmentID);
+                editEquipmentCmd.Parameters.AddWithValue("@NewEquipmentID", newEquipmentID);
+                editEquipmentCmd.Parameters.AddWithValue("@OldName", oldName);
+                editEquipmentCmd.Parameters.AddWithValue("@NewName", newName);
+                editEquipmentCmd.Parameters.AddWithValue("@OldQuantity", oldQuantity);
+                editEquipmentCmd.Parameters.AddWithValue("@NewQuantity", newQuantity);
+                editEquipmentCmd.Parameters.AddWithValue("@OldDescription", oldDescription);
+                editEquipmentCmd.Parameters.AddWithValue("@NewDescription", newDescription);
+
+                int rowsAffected = editEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
         }
     }
 }
