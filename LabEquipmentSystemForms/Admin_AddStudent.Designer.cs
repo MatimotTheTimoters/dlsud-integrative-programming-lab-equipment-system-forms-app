@@ -47,6 +47,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -102,6 +103,7 @@
             this.btnSelectPicture.TabIndex = 16;
             this.btnSelectPicture.Text = "SELECT IMAGE";
             this.btnSelectPicture.UseVisualStyleBackColor = true;
+            this.btnSelectPicture.Click += new System.EventHandler(this.btnSelectPicture_Click);
             // 
             // cbCourse
             // 
@@ -296,6 +298,10 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormAdminAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +342,6 @@
         private System.Windows.Forms.Button btnSelectPicture;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

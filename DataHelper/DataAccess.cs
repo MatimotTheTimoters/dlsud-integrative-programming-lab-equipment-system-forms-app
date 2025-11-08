@@ -62,28 +62,28 @@ namespace DataHelper
         }
 
         // Admin methods
-        public static bool AddStudent (string studentID, string password, string profilePicture, string firstName, string lastName, string gender, string course)
+        public static bool AddStudent(string studentID, string password, byte[] profilePicture, string firstName, string lastName, string gender, string course)
         {
             bool success = false;
 
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand addStudentCmd = new SqlCommand("Admin_AddStudent", sqlCon);
-                addStudentCmd.CommandType = CommandType.StoredProcedure;
 
-                addStudentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                addStudentCmd.Parameters.AddWithValue("@Password", password);
-                addStudentCmd.Parameters.AddWithValue("@ProfilePicture", profilePicture);
-                addStudentCmd.Parameters.AddWithValue("@FirstName", firstName);
-                addStudentCmd.Parameters.AddWithValue("@LastName", lastName);
-                addStudentCmd.Parameters.AddWithValue("@Gender", gender);
-                addStudentCmd.Parameters.AddWithValue("@Course", course);
-
-                int rowsAffected = addStudentCmd.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                using (SqlCommand addStudentCmd = new SqlCommand("Admin_AddStudent", sqlCon))
                 {
-                    success = true;
+                    addStudentCmd.CommandType = CommandType.StoredProcedure;
+
+                    addStudentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                    addStudentCmd.Parameters.AddWithValue("@Password", password);
+                    addStudentCmd.Parameters.Add("@ProfilePicture", SqlDbType.Image).Value = (object)profilePicture ?? DBNull.Value;
+                    addStudentCmd.Parameters.AddWithValue("@FirstName", firstName);
+                    addStudentCmd.Parameters.AddWithValue("@LastName", lastName);
+                    addStudentCmd.Parameters.AddWithValue("@Gender", gender);
+                    addStudentCmd.Parameters.AddWithValue("@Course", course);
+
+                    int rowsAffected = addStudentCmd.ExecuteNonQuery();
+                    success = rowsAffected > 0;
                 }
             }
 
