@@ -64,12 +64,14 @@
             this.addNewStudentMenuItem.Name = "addNewStudentMenuItem";
             this.addNewStudentMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewStudentMenuItem.Text = "Add New Student";
+            this.addNewStudentMenuItem.Click += new System.EventHandler(this.addNewStudentMenuItem_Click);
             // 
             // viewStudentsMenuItem
             // 
             this.viewStudentsMenuItem.Name = "viewStudentsMenuItem";
             this.viewStudentsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewStudentsMenuItem.Text = "View Students";
+            this.viewStudentsMenuItem.Click += new System.EventHandler(this.viewStudentsMenuItem_Click);
             // 
             // equipmentMenuItem
             // 
@@ -86,18 +88,21 @@
             this.addNewEquipmentMenuItem.Name = "addNewEquipmentMenuItem";
             this.addNewEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
             this.addNewEquipmentMenuItem.Text = "Add New Equipment";
+            this.addNewEquipmentMenuItem.Click += new System.EventHandler(this.addNewEquipmentMenuItem_Click);
             // 
             // viewEquipmentMenuItem
             // 
             this.viewEquipmentMenuItem.Name = "viewEquipmentMenuItem";
             this.viewEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
             this.viewEquipmentMenuItem.Text = "View Equipment";
+            this.viewEquipmentMenuItem.Click += new System.EventHandler(this.viewEquipmentMenuItem_Click);
             // 
             // editEquipmentMenuItem
             // 
             this.editEquipmentMenuItem.Name = "editEquipmentMenuItem";
             this.editEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
             this.editEquipmentMenuItem.Text = "Edit Equipment";
+            this.editEquipmentMenuItem.Click += new System.EventHandler(this.editEquipmentMenuItem_Click);
             // 
             // FormAdminHome
             // 

@@ -93,6 +93,7 @@
     <Compile Include="Admin_ViewRecords.Designer.cs">
       <DependentUpon>Admin_ViewRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHelper\MDIHelper.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

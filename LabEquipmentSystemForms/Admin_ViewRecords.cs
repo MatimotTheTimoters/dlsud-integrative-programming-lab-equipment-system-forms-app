@@ -17,7 +17,7 @@ namespace LabEquipmentSystemForms
         public FormAdminViewRecords(string cmd)
         {
             InitializeComponent();
-            formCmd = cmd;
+            formCmd = cmd.ToLower();
 
             LoadSelectedRecords();
         }
