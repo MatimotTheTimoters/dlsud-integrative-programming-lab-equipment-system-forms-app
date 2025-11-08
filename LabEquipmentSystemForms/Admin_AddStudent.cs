@@ -76,5 +76,10 @@ namespace LabEquipmentSystemForms
 
             txtStudentId.Focus();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
     }
 }
