@@ -140,5 +140,35 @@ namespace DataHelper
                 return dt;
             }
         }
+
+        public static bool EditEquipment(
+            string oldEquipmentID, string newEquipmentID,
+            string oldName, string newName,
+            int oldQuantity, int newQuantity,
+            string oldDescription, string newDescription)
+        {
+            bool success = false;
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand editEquipmentCmd = new SqlCommand("Admin_EditEquipment", sqlCon);
+                editEquipmentCmd.CommandType = CommandType.StoredProcedure;
+
+                editEquipmentCmd.Parameters.AddWithValue("@OldEquipmentID", oldEquipmentID);
+                editEquipmentCmd.Parameters.AddWithValue("@NewEquipmentID", newEquipmentID);
+                editEquipmentCmd.Parameters.AddWithValue("@OldName", oldName);
+                editEquipmentCmd.Parameters.AddWithValue("@NewName", newName);
+                editEquipmentCmd.Parameters.AddWithValue("@OldQuantity", oldQuantity);
+                editEquipmentCmd.Parameters.AddWithValue("@NewQuantity", newQuantity);
+                editEquipmentCmd.Parameters.AddWithValue("@OldDescription", oldDescription);
+                editEquipmentCmd.Parameters.AddWithValue("@NewDescription", newDescription);
+
+                int rowsAffected = editEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
     }
 }
