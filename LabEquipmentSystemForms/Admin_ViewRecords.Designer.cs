@@ -96,12 +96,13 @@
             this.cbGender.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Students",
+            "Equipment"});
             this.cbGender.Location = new System.Drawing.Point(3, 3);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(215, 33);
             this.cbGender.TabIndex = 14;
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // btnRefresh
             // 

@@ -19,11 +19,7 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
             formCmd = cmd;
 
-            if (cmd.Equals("students"))
-            {
-                this.Text = "View Student Records";
-                LoadStudentRecords();
-            }
+            LoadSelectedRecords();
         }
 
         private void LoadStudentRecords()
@@ -34,12 +30,34 @@ namespace LabEquipmentSystemForms
             dataGridView.DataSource = studentRecords;
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void LoadEquipmentRecords()
         {
-            if (formCmd.Equals("students"))
-            {
+            dataGridView.DataSource = null;
+
+            DataTable equipmentRecords = DataAccess.ViewEquipment();
+            dataGridView.DataSource = equipmentRecords;
+        }
+
+        private void LoadSelectedRecords()
+        {
+            if (formCmd.Equals("students")) {
                 LoadStudentRecords();
+            } else if (formCmd.Equals("equipment")) {
+                LoadEquipmentRecords();
             }
         }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            formCmd = cbGender.SelectedItem.ToString().ToLower();
+            
+            LoadSelectedRecords();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadSelectedRecords();
+        }
+
     }
 }
