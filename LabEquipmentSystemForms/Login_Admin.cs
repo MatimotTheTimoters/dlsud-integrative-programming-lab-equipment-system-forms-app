@@ -20,15 +20,18 @@ namespace LabEquipmentSystemForms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string adminID = txtAdminId.Text.ToString();
+            string password = txtPassword.Text.ToString();
+
             bool success = DataAccess.LoginAdmin(
-                txtAdminId.Text.ToString(), 
-                txtPassword.Text.ToString());
+                adminID, 
+                password);
 
             if (success)
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                FormAdminHome adminHome = new FormAdminHome();
+                FormAdminHome adminHome = new FormAdminHome(adminID);
                 adminHome.Show();
                 this.Close();
                 adminHome.Focus();

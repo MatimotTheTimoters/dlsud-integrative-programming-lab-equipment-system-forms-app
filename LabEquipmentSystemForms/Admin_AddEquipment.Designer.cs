@@ -30,15 +30,15 @@
         {
             this.txtEquipmentId = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblEquipmentID = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.rtbDescription = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -59,8 +59,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblDescription, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblQuantity, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblEquipmentID, 0, 0);
@@ -79,6 +79,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(3, 276);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(215, 92);
+            this.lblDescription.TabIndex = 7;
+            this.lblDescription.Text = "DESCRIPTION";
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(3, 184);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(215, 92);
+            this.lblQuantity.TabIndex = 5;
+            this.lblQuantity.Text = "QUANTITY";
+            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtName
             // 
@@ -113,18 +137,15 @@
             this.lblEquipmentID.Text = "EQUIPMENT ID";
             this.lblEquipmentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnClear
+            // flowLayoutPanel1
             // 
-            this.btnClear.AutoSize = true;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(209, 3);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(200, 61);
-            this.btnClear.TabIndex = 6;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.flowLayoutPanel1.Controls.Add(this.btnCreate);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 371);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(657, 87);
+            this.flowLayoutPanel1.TabIndex = 4;
             // 
             // btnCreate
             // 
@@ -139,27 +160,18 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // flowLayoutPanel1
+            // btnClear
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnCreate);
-            this.flowLayoutPanel1.Controls.Add(this.btnClear);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 371);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(657, 87);
-            this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 92);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "QUANTITY";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClear.AutoSize = true;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(209, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(200, 61);
+            this.btnClear.TabIndex = 6;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // nudQuantity
             // 
@@ -174,18 +186,6 @@
             0,
             0,
             0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 92);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "DESCRIPTION";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rtbDescription
             // 
@@ -225,8 +225,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.NumericUpDown nudQuantity;
         private System.Windows.Forms.RichTextBox rtbDescription;
     }

@@ -12,7 +12,11 @@ namespace DataHelper
     {
         public static string conStr = $@"";
 
-        // Login methods
+
+
+        /* ===========================
+         *       LOGIN METHODS
+         * =========================== */
         public static bool LoginAdmin (string adminID, string password)
         {
             bool success = false;
@@ -61,7 +65,13 @@ namespace DataHelper
             return success;
         }
 
-        // Admin methods
+
+
+        /* ===========================
+         *       ADMIN METHODS
+         * =========================== */
+
+        // Students
         public static bool AddStudent(string studentID, string password, byte[] profilePicture, string firstName, string lastName, string gender, string course)
         {
             bool success = false;
@@ -105,6 +115,7 @@ namespace DataHelper
 
         }
 
+        // Equipment
         public static bool AddEquipment(string equipmentID, string name, int quantity, string description)
         {
             bool success = false;
@@ -170,5 +181,80 @@ namespace DataHelper
 
             return success;
         }
+
+        // Requests
+        public static bool ApproveEquipmentRequest(string requestID, string adminID, DateTime dateTimeBorrowed)
+        {
+            bool success = false;
+
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand approveRequestCmd = new SqlCommand("Admin_ApproveEquipmentRequest", sqlCon);
+                approveRequestCmd.CommandType = CommandType.StoredProcedure;
+
+                approveRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
+                approveRequestCmd.Parameters.AddWithValue("@AdminID", adminID);
+                approveRequestCmd.Parameters.AddWithValue("@DateTimeBorrowed", dateTimeBorrowed);
+
+                int rowsAffected = approveRequestCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
+
+        public static bool DenyEquipmentRequest(string requestID, string adminID)
+        {
+            bool success = false;
+
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand denyRequestCmd = new SqlCommand("Admin_DenyEquipmentRequest", sqlCon);
+                denyRequestCmd.CommandType = CommandType.StoredProcedure;
+
+                denyRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
+                denyRequestCmd.Parameters.AddWithValue("@AdminID", adminID);
+
+                int rowsAffected = denyRequestCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
+
+
+
+        /* ===========================
+         *       STUDENT METHODS
+         * =========================== */
+        public static bool RequestEquipment(string studentID, string equipmentID, int quantity, DateTime requestDate, string status)
+        {
+            bool success = false;
+
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand requestEquipmentCmd = new SqlCommand("Student_RequestEquipment", sqlCon);
+                requestEquipmentCmd.CommandType = CommandType.StoredProcedure;
+
+                requestEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                requestEquipmentCmd.Parameters.AddWithValue("@EquipmentID", equipmentID);
+                requestEquipmentCmd.Parameters.AddWithValue("@Quantity", quantity);
+                requestEquipmentCmd.Parameters.AddWithValue("@RequestDate", requestDate);
+                requestEquipmentCmd.Parameters.AddWithValue("@Status", status);
+
+                int rowsAffected = requestEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
+
+
     }
 }

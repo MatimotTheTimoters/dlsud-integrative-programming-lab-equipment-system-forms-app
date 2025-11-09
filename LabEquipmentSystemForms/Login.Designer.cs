@@ -50,12 +50,14 @@
             this.studentLoginMenuItem.Name = "studentLoginMenuItem";
             this.studentLoginMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentLoginMenuItem.Text = "Student Login";
+            this.studentLoginMenuItem.Click += new System.EventHandler(this.studentLoginMenuItem_Click);
             // 
             // adminLoginMenuItem
             // 
             this.adminLoginMenuItem.Name = "adminLoginMenuItem";
             this.adminLoginMenuItem.Size = new System.Drawing.Size(88, 20);
             this.adminLoginMenuItem.Text = "Admin Login";
+            this.adminLoginMenuItem.Click += new System.EventHandler(this.adminLoginMenuItem_Click);
             // 
             // FormLogin
             // 

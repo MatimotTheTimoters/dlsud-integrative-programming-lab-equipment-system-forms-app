@@ -12,9 +12,43 @@ namespace LabEquipmentSystemForms
 {
     public partial class FormAdminHome : Form
     {
-        public FormAdminHome()
+        string adminID;
+
+        public FormAdminHome(string adminID)
         {
             InitializeComponent();
+
+            this.adminID = adminID;
+        }
+
+        private void addNewStudentMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminAddStudent formAdminAddStudent = new FormAdminAddStudent();
+            FormHelper.MDIHelper.LoadChildForm(formAdminAddStudent, this);
+        }
+
+        private void viewStudentsMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminViewRecords formAdminViewRecords = new FormAdminViewRecords("Students");
+            FormHelper.MDIHelper.LoadChildForm(formAdminViewRecords, this);
+        }
+
+        private void addNewEquipmentMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminAddEquipment formAdminAddEquipment = new FormAdminAddEquipment();
+            FormHelper.MDIHelper.LoadChildForm(formAdminAddEquipment, this);
+        }
+
+        private void viewEquipmentMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminViewRecords formAdminViewRecords = new FormAdminViewRecords("Equipment");
+            FormHelper.MDIHelper.LoadChildForm(formAdminViewRecords, this);
+        }
+
+        private void editEquipmentMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminEditEquipment formAdminEditEquipment = new FormAdminEditEquipment();
+            FormHelper.MDIHelper.LoadChildForm(formAdminEditEquipment, this);
         }
     }
 }

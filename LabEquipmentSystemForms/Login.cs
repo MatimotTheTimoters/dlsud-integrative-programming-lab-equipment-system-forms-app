@@ -16,5 +16,17 @@ namespace LabEquipmentSystemForms
         {
             InitializeComponent();
         }
+
+        private void studentLoginMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoginStudent formLoginStudent = new FormLoginStudent();
+            FormHelper.MDIHelper.LoadChildForm(formLoginStudent, this);
+        }
+
+        private void adminLoginMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoginAdmin formLoginAdmin = new FormLoginAdmin();
+            FormHelper.MDIHelper.LoadChildForm(formLoginAdmin, this);
+        }
     }
 }

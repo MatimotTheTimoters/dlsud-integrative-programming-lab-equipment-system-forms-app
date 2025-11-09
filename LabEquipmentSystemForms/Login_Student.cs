@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataHelper;
+using System.Web;
 
 namespace LabEquipmentSystemForms
 {
@@ -21,15 +22,18 @@ namespace LabEquipmentSystemForms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string studentID = txtStudentId.Text.ToString();
+            string password = txtPassword.Text.ToString();
+
             bool success = DataAccess.LoginAdmin(
-                txtStudentId.Text.ToString(),
-                txtPassword.Text.ToString());
+                studentID,
+                password);
 
             if (success)
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                FormStudentHome studentHome = new FormStudentHome();
+                FormStudentHome studentHome = new FormStudentHome(studentID);
                 studentHome.Show();
                 this.Close();
                 studentHome.Focus();
