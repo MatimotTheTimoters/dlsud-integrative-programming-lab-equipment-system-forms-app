@@ -170,5 +170,31 @@ namespace DataHelper
 
             return success;
         }
+
+        // Student methods
+
+        public static bool RequestEquipment(string studentID, string equipmentID, int quantity, DateTime requestDate, string status)
+        {
+            bool success = false;
+
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+
+                SqlCommand requestEquipmentCmd = new SqlCommand("Student_RequestEquipment", sqlCon);
+                requestEquipmentCmd.CommandType = CommandType.StoredProcedure;
+
+                requestEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                requestEquipmentCmd.Parameters.AddWithValue("@EquipmentID", equipmentID);
+                requestEquipmentCmd.Parameters.AddWithValue("@Quantity", quantity);
+                requestEquipmentCmd.Parameters.AddWithValue("@RequestDate", requestDate);
+                requestEquipmentCmd.Parameters.AddWithValue("@Status", status);
+
+                int rowsAffected = requestEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+
+            return success;
+        }
     }
 }
