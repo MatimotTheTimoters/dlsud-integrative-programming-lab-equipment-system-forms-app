@@ -183,7 +183,7 @@ namespace DataHelper
         }
 
         // Requests
-        public static bool ApproveEquipmentRequest(string requestID, string adminID, DateTime dateTimeBorrowed)
+        public static bool ApproveEquipmentRequest(string requestID, string adminID)
         {
             bool success = false;
 
@@ -196,7 +196,6 @@ namespace DataHelper
 
                 approveRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
                 approveRequestCmd.Parameters.AddWithValue("@AdminID", adminID);
-                approveRequestCmd.Parameters.AddWithValue("@DateTimeBorrowed", dateTimeBorrowed);
 
                 int rowsAffected = approveRequestCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
@@ -226,6 +225,19 @@ namespace DataHelper
             return success;
         }
 
+        public static DataTable ViewPendingEquipmentRequests()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("Admin_ViewPendingEquipmentRequests", sqlCon);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
 
 
         /* ===========================
