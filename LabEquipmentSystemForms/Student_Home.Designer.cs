@@ -79,6 +79,7 @@
             this.makeNewRequestMenuItem.Name = "makeNewRequestMenuItem";
             this.makeNewRequestMenuItem.Size = new System.Drawing.Size(180, 22);
             this.makeNewRequestMenuItem.Text = "Make New Request";
+            this.makeNewRequestMenuItem.Click += new System.EventHandler(this.makeNewRequestMenuItem_Click);
             // 
             // viewMyRequestsMenuItem
             // 
