@@ -12,9 +12,13 @@ namespace LabEquipmentSystemForms
 {
     public partial class FormAdminHome : Form
     {
-        public FormAdminHome()
+        string adminID;
+
+        public FormAdminHome(string adminID)
         {
             InitializeComponent();
+
+            this.adminID = adminID;
         }
 
         private void addNewStudentMenuItem_Click(object sender, EventArgs e)
