@@ -16,6 +16,7 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
 
             this.adminID = adminID;
+
             LoadEquipmentRequestsRecords(currentStatus);
             BindDataSourceToControls();
         }
@@ -84,28 +85,12 @@ namespace LabEquipmentSystemForms
             }
         }
 
-        // 🔽 Filter Buttons
-        private void btnFilterAll_Click(object sender, EventArgs e)
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentStatus = "";
-            LoadEquipmentRequestsRecords(currentStatus);
-        }
+            string selected = cbFilter.SelectedItem.ToString();
 
-        private void btnFilterPending_Click(object sender, EventArgs e)
-        {
-            currentStatus = "Pending";
-            LoadEquipmentRequestsRecords(currentStatus);
-        }
+            currentStatus = (selected == "All") ? "" : selected;
 
-        private void btnFilterApproved_Click(object sender, EventArgs e)
-        {
-            currentStatus = "Approved";
-            LoadEquipmentRequestsRecords(currentStatus);
-        }
-
-        private void btnFilterDenied_Click(object sender, EventArgs e)
-        {
-            currentStatus = "Denied";
             LoadEquipmentRequestsRecords(currentStatus);
         }
     }

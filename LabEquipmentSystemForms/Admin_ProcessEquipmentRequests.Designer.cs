@@ -29,38 +29,32 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnApprove = new System.Windows.Forms.Button();
-            this.btnDeny = new System.Windows.Forms.Button();
-            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblFilter = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.lblStudentID = new System.Windows.Forms.Label();
             this.txtEquipmentID = new System.Windows.Forms.TextBox();
             this.lblEquipmentID = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.lblFilter = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnFilterAll = new System.Windows.Forms.Button();
-            this.btnFilterPending = new System.Windows.Forms.Button();
-            this.btnFilterApproved = new System.Windows.Forms.Button();
-            this.btnFilterDenied = new System.Windows.Forms.Button();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblFilter, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblQuantity, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtStudentID, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblStudentID, 0, 1);
@@ -80,57 +74,29 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // flowLayoutPanel2
+            // flowLayoutPanel1
             // 
-            this.flowLayoutPanel2.Controls.Add(this.btnApprove);
-            this.flowLayoutPanel2.Controls.Add(this.btnDeny);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(666, 141);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(215, 40);
-            this.flowLayoutPanel2.TabIndex = 9;
+            this.flowLayoutPanel1.Controls.Add(this.cbFilter);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 141);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(657, 40);
+            this.flowLayoutPanel1.TabIndex = 12;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
-            // btnApprove
+            // lblFilter
             // 
-            this.btnApprove.AutoSize = true;
-            this.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnApprove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.Location = new System.Drawing.Point(3, 3);
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(100, 30);
-            this.btnApprove.TabIndex = 5;
-            this.btnApprove.Text = "APPROVE";
-            this.btnApprove.UseVisualStyleBackColor = true;
-            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
-            // 
-            // btnDeny
-            // 
-            this.btnDeny.AutoSize = true;
-            this.btnDeny.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDeny.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeny.Location = new System.Drawing.Point(109, 3);
-            this.btnDeny.Name = "btnDeny";
-            this.btnDeny.Size = new System.Drawing.Size(100, 30);
-            this.btnDeny.TabIndex = 6;
-            this.btnDeny.Text = "DENY";
-            this.btnDeny.UseVisualStyleBackColor = true;
-            this.btnDeny.Click += new System.EventHandler(this.btnDeny_Click);
-            // 
-            // nudQuantity
-            // 
-            this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.nudQuantity, 2);
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.nudQuantity.Location = new System.Drawing.Point(224, 95);
-            this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.ReadOnly = true;
-            this.nudQuantity.Size = new System.Drawing.Size(657, 43);
-            this.nudQuantity.TabIndex = 7;
-            this.nudQuantity.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Location = new System.Drawing.Point(3, 138);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(215, 46);
+            this.lblFilter.TabIndex = 11;
+            this.lblFilter.Text = "FILTER BY";
+            this.lblFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblQuantity
             // 
@@ -147,7 +113,6 @@
             // txtStudentID
             // 
             this.txtStudentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.txtStudentID, 2);
             this.txtStudentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentID.Location = new System.Drawing.Point(224, 49);
             this.txtStudentID.Name = "txtStudentID";
@@ -170,7 +135,6 @@
             // txtEquipmentID
             // 
             this.txtEquipmentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.txtEquipmentID, 2);
             this.txtEquipmentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEquipmentID.Location = new System.Drawing.Point(224, 3);
             this.txtEquipmentID.Name = "txtEquipmentID";
@@ -194,7 +158,7 @@
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 3);
+            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 2);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(3, 187);
             this.dataGridView.Name = "dataGridView";
@@ -202,82 +166,63 @@
             this.dataGridView.TabIndex = 10;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
-            // lblFilter
+            // nudQuantity
             // 
-            this.lblFilter.AutoSize = true;
-            this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilter.Location = new System.Drawing.Point(3, 138);
-            this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(215, 46);
-            this.lblFilter.TabIndex = 11;
-            this.lblFilter.Text = "FILTER BY";
-            this.lblFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.nudQuantity.Location = new System.Drawing.Point(224, 95);
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.ReadOnly = true;
+            this.nudQuantity.Size = new System.Drawing.Size(657, 43);
+            this.nudQuantity.TabIndex = 7;
+            this.nudQuantity.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
-            // flowLayoutPanel1
+            // cbFilter
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnFilterAll);
-            this.flowLayoutPanel1.Controls.Add(this.btnFilterPending);
-            this.flowLayoutPanel1.Controls.Add(this.btnFilterApproved);
-            this.flowLayoutPanel1.Controls.Add(this.btnFilterDenied);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 141);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(436, 40);
-            this.flowLayoutPanel1.TabIndex = 12;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.cbFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Denied"});
+            this.cbFilter.Location = new System.Drawing.Point(3, 3);
+            this.cbFilter.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(215, 33);
+            this.cbFilter.TabIndex = 16;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
-            // btnFilterAll
+            // button1
             // 
-            this.btnFilterAll.AutoSize = true;
-            this.btnFilterAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFilterAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterAll.Location = new System.Drawing.Point(3, 3);
-            this.btnFilterAll.Name = "btnFilterAll";
-            this.btnFilterAll.Size = new System.Drawing.Size(100, 30);
-            this.btnFilterAll.TabIndex = 5;
-            this.btnFilterAll.Text = "ALL";
-            this.btnFilterAll.UseVisualStyleBackColor = true;
-            this.btnFilterAll.Click += new System.EventHandler(this.btnFilterAll_Click);
+            this.button1.AutoSize = true;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(271, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "APPROVE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnApprove_Click);
             // 
-            // btnFilterPending
+            // button2
             // 
-            this.btnFilterPending.AutoSize = true;
-            this.btnFilterPending.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFilterPending.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterPending.Location = new System.Drawing.Point(109, 3);
-            this.btnFilterPending.Name = "btnFilterPending";
-            this.btnFilterPending.Size = new System.Drawing.Size(100, 30);
-            this.btnFilterPending.TabIndex = 6;
-            this.btnFilterPending.Text = "PENDING";
-            this.btnFilterPending.UseVisualStyleBackColor = true;
-            this.btnFilterPending.Click += new System.EventHandler(this.btnFilterPending_Click);
-            // 
-            // btnFilterApproved
-            // 
-            this.btnFilterApproved.AutoSize = true;
-            this.btnFilterApproved.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFilterApproved.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterApproved.Location = new System.Drawing.Point(215, 3);
-            this.btnFilterApproved.Name = "btnFilterApproved";
-            this.btnFilterApproved.Size = new System.Drawing.Size(109, 30);
-            this.btnFilterApproved.TabIndex = 7;
-            this.btnFilterApproved.Text = "APPROVED";
-            this.btnFilterApproved.UseVisualStyleBackColor = true;
-            this.btnFilterApproved.Click += new System.EventHandler(this.btnFilterApproved_Click);
-            // 
-            // btnFilterDenied
-            // 
-            this.btnFilterDenied.AutoSize = true;
-            this.btnFilterDenied.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFilterDenied.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterDenied.Location = new System.Drawing.Point(330, 3);
-            this.btnFilterDenied.Name = "btnFilterDenied";
-            this.btnFilterDenied.Size = new System.Drawing.Size(100, 30);
-            this.btnFilterDenied.TabIndex = 8;
-            this.btnFilterDenied.Text = "DENIED";
-            this.btnFilterDenied.UseVisualStyleBackColor = true;
-            this.btnFilterDenied.Click += new System.EventHandler(this.btnFilterDenied_Click);
+            this.button2.AutoSize = true;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(389, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 34);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "DENY";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnDeny_Click);
             // 
             // FormAdminProcessEquipmentRequests
             // 
@@ -290,12 +235,10 @@
             this.Text = "Process Requests";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,15 +252,11 @@
         private System.Windows.Forms.Label lblStudentID;
         private System.Windows.Forms.TextBox txtEquipmentID;
         private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button btnApprove;
-        private System.Windows.Forms.Button btnDeny;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnFilterAll;
-        private System.Windows.Forms.Button btnFilterPending;
-        private System.Windows.Forms.Button btnFilterApproved;
-        private System.Windows.Forms.Button btnFilterDenied;
         private System.Windows.Forms.Label lblFilter;
+        private System.Windows.Forms.ComboBox cbFilter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
