@@ -253,5 +253,22 @@ namespace DataHelper
                 return dt;
             }
         }
+
+        public static bool BorrowEquipment(string requestID, string studentID, DateTime dateTimeBorrowed)
+        {
+            bool success = false;
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand borrowEquipmentCmd = new SqlCommand("Student_BorrowEquipment", sqlCon);
+                borrowEquipmentCmd.CommandType = CommandType.StoredProcedure;
+                borrowEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
+                borrowEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                borrowEquipmentCmd.Parameters.AddWithValue("@DateTimeBorrowed", dateTimeBorrowed);
+                int rowsAffected = borrowEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+            return success;
+        }
     }
 }
