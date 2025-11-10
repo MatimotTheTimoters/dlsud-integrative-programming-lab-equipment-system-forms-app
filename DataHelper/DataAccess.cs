@@ -270,5 +270,22 @@ namespace DataHelper
             }
             return success;
         }
+
+        public static bool ReturnEquipment(string requestID, string studentID, DateTime dateTimeReturned)
+        {
+            bool success = false;
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand returnEquipmentCmd = new SqlCommand("Student_ReturnEquipment", sqlCon);
+                returnEquipmentCmd.CommandType = CommandType.StoredProcedure;
+                returnEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
+                returnEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
+                returnEquipmentCmd.Parameters.AddWithValue("@DateTimeReturned", dateTimeReturned);
+                int rowsAffected = returnEquipmentCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+            return success;
+        }
     }
 }
