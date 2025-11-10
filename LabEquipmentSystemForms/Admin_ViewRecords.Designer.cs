@@ -42,9 +42,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.Controls.Add(this.lblDataSource, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
@@ -64,10 +63,10 @@
             this.lblDataSource.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataSource.Location = new System.Drawing.Point(3, 0);
             this.lblDataSource.Name = "lblDataSource";
-            this.lblDataSource.Size = new System.Drawing.Size(170, 45);
+            this.lblDataSource.Size = new System.Drawing.Size(214, 45);
             this.lblDataSource.TabIndex = 15;
             this.lblDataSource.Text = "DATA SOURCE";
-            this.lblDataSource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDataSource.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dataGridView
             // 
@@ -85,9 +84,9 @@
             this.flowLayoutPanel1.Controls.Add(this.cbGender);
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(179, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(223, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(698, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(654, 39);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // cbGender
@@ -99,6 +98,7 @@
             "Students",
             "Equipment"});
             this.cbGender.Location = new System.Drawing.Point(3, 3);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(215, 33);
             this.cbGender.TabIndex = 14;
@@ -109,9 +109,9 @@
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(224, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(271, 3);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(180, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(106, 34);
             this.btnRefresh.TabIndex = 15;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
