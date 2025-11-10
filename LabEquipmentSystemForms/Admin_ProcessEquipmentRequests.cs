@@ -22,7 +22,8 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
 
             this.adminID = adminID;
-            LoadEquipmentRequestsRecords();
+            string status = "";
+            LoadEquipmentRequestsRecords(status);
             BindDataSourceToControls();
         }
 
@@ -38,7 +39,8 @@ namespace LabEquipmentSystemForms
             if (success)
             {
                 MessageBox.Show("Equipment request approved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadEquipmentRequestsRecords(); // Refresh records
+                string status = "Approved";
+                LoadEquipmentRequestsRecords(status); // Refresh records
             }
             else
             {
@@ -58,7 +60,8 @@ namespace LabEquipmentSystemForms
             if (success)
             {
                 MessageBox.Show("Equipment request denied successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadEquipmentRequestsRecords(); // Refresh records
+                string status = "Denied";
+                LoadEquipmentRequestsRecords(status); // Refresh records
             }
             else
             {
@@ -66,9 +69,9 @@ namespace LabEquipmentSystemForms
             }
         }
 
-        private void LoadEquipmentRequestsRecords()
+        private void LoadEquipmentRequestsRecords(string status)
         {
-            DataTable dt = DataAccess.ViewEquipmentRequests();
+            DataTable dt = DataAccess.ViewEquipmentRequests(status);
             bs.DataSource = dt;
             dataGridView.DataSource = bs;
         }
