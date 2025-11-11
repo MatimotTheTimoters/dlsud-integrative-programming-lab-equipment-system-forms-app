@@ -50,5 +50,11 @@ namespace LabEquipmentSystemForms
             FormAdminEditEquipment formAdminEditEquipment = new FormAdminEditEquipment();
             FormHelper.MDIHelper.LoadChildForm(formAdminEditEquipment, this);
         }
+
+        private void viewTransactionsMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminViewRecords formAdminViewRecords = new FormAdminViewRecords("Transactions");
+            FormHelper.MDIHelper.LoadChildForm(formAdminViewRecords, this);
+        }
     }
 }

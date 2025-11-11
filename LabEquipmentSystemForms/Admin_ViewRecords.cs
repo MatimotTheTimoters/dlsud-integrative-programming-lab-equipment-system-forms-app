@@ -14,10 +14,11 @@ namespace LabEquipmentSystemForms
     public partial class FormAdminViewRecords : Form
     {
         string formCmd;
+
         public FormAdminViewRecords(string cmd)
         {
             InitializeComponent();
-            formCmd = cmd.ToLower();
+            this.formCmd = cmd.ToLower();
 
             LoadSelectedRecords();
         }
@@ -38,12 +39,27 @@ namespace LabEquipmentSystemForms
             dataGridView.DataSource = equipmentRecords;
         }
 
+        private void LoadTransactionRecords()
+        {
+            dataGridView.DataSource = null;
+
+            DataTable transactionRecords = DataAccess.ViewEquipmentTransactions();
+            dataGridView.DataSource = transactionRecords;
+        }
+
         private void LoadSelectedRecords()
         {
-            if (formCmd.Equals("students")) {
+            if (formCmd.Equals("students"))
+            {
                 LoadStudentRecords();
-            } else if (formCmd.Equals("equipment")) {
+            }
+            else if (formCmd.Equals("equipment"))
+            {
                 LoadEquipmentRecords();
+            }
+            else if (formCmd.Equals("transactions"))
+            {
+                LoadTransactionRecords();
             }
         }
 

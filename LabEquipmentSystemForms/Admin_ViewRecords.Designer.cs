@@ -96,7 +96,8 @@
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Students",
-            "Equipment"});
+            "Equipment",
+            "Transactions"});
             this.cbGender.Location = new System.Drawing.Point(3, 3);
             this.cbGender.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             this.cbGender.Name = "cbGender";

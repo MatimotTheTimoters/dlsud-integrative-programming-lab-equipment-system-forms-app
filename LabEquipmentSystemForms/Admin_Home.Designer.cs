@@ -36,6 +36,8 @@
             this.addNewEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTransactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentMenuItem,
-            this.equipmentMenuItem});
+            this.equipmentMenuItem,
+            this.transactionsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(980, 24);
@@ -104,6 +107,21 @@
             this.editEquipmentMenuItem.Text = "Edit Equipment";
             this.editEquipmentMenuItem.Click += new System.EventHandler(this.editEquipmentMenuItem_Click);
             // 
+            // transactionsMenuItem
+            // 
+            this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewTransactionsMenuItem});
+            this.transactionsMenuItem.Name = "transactionsMenuItem";
+            this.transactionsMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.transactionsMenuItem.Text = "Transactions";
+            // 
+            // viewTransactionsMenuItem
+            // 
+            this.viewTransactionsMenuItem.Name = "viewTransactionsMenuItem";
+            this.viewTransactionsMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewTransactionsMenuItem.Text = "View Transactions";
+            this.viewTransactionsMenuItem.Click += new System.EventHandler(this.viewTransactionsMenuItem_Click);
+            // 
             // FormAdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,5 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem addNewEquipmentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEquipmentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editEquipmentMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactionsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewTransactionsMenuItem;
     }
 }
