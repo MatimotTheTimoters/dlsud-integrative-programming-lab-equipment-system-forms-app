@@ -30,6 +30,11 @@ namespace LabEquipmentSystemForms
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
 
+            txtEquipmentId.ReadOnly = false;
+            txtName.ReadOnly = false;
+            nudQuantity.ReadOnly = false;
+            rtbDescription.ReadOnly = false;
+
             oldEquipmentID = txtEquipmentId.Text;
             oldName = txtName.Text;
             oldQuantity = Convert.ToInt32(nudQuantity.Value);
@@ -80,6 +85,11 @@ namespace LabEquipmentSystemForms
             btnEdit.Enabled = true;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
+
+            txtEquipmentId.ReadOnly = true;
+            txtName.ReadOnly = true;
+            nudQuantity.ReadOnly = true;
+            rtbDescription.ReadOnly = true;
         }
 
         private void ClearValues()
