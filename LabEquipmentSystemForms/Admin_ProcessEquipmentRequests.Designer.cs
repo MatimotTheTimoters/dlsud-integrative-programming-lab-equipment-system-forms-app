@@ -30,6 +30,9 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.txtStudentID = new System.Windows.Forms.TextBox();
@@ -38,9 +41,6 @@
             this.lblEquipmentID = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.cbFilter = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -85,6 +85,49 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(657, 40);
             this.flowLayoutPanel1.TabIndex = 12;
             this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Denied"});
+            this.cbFilter.Location = new System.Drawing.Point(3, 3);
+            this.cbFilter.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(215, 33);
+            this.cbFilter.TabIndex = 16;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(271, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "APPROVE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnApprove_Click);
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(389, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 34);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "DENY";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnDeny_Click);
             // 
             // lblFilter
             // 
@@ -180,49 +223,6 @@
             0,
             0,
             0});
-            // 
-            // cbFilter
-            // 
-            this.cbFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Items.AddRange(new object[] {
-            "All",
-            "Pending",
-            "Approved",
-            "Denied"});
-            this.cbFilter.Location = new System.Drawing.Point(3, 3);
-            this.cbFilter.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(215, 33);
-            this.cbFilter.TabIndex = 16;
-            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(271, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "APPROVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnApprove_Click);
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(389, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 34);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "DENY";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnDeny_Click);
             // 
             // FormAdminProcessEquipmentRequests
             // 

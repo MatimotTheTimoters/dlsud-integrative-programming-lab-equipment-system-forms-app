@@ -21,6 +21,8 @@ namespace LabEquipmentSystemForms
         {
             InitializeComponent();
             LoadMyEquipmentRequests();
+
+            this.studentID = studentID;
         }
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,6 +45,38 @@ namespace LabEquipmentSystemForms
             DataTable dt = DataAccess.ViewMyEquipmentRequests(studentID, currentStatus);
             bs.DataSource = dt;
             dataGridView.DataSource = bs;
+        }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
+        {
+            // Check if row is selected
+            if (dataGridView.CurrentRow == null) return;
+
+            // Get Status field from currently selected row
+            string status = dataGridView.CurrentRow.Cells["Status"].Value.ToString().ToLower();
+
+            // Check Status field
+            if (status.Equals("approved"))
+            {
+                // If approved, execute BorrowEquipment method
+                string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
+                DateTime dateTimeBorrowed = DateTime.Now;
+
+                bool success = DataAccess.BorrowEquipment(
+                    requestID,
+                    studentID,
+                    dateTimeBorrowed
+                );
+
+                MessageBox.Show("Equipment borrowed successfully. View in Equipment > Transactions > View My Transactions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                // Else show MessageBox indicating cannot borrow
+                MessageBox.Show("Only approved requests can be borrowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

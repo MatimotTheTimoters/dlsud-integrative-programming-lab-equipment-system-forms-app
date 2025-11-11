@@ -34,6 +34,7 @@
             this.lblFilter = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBorrow = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -43,6 +44,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.cbFilter);
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
+            this.flowLayoutPanel1.Controls.Add(this.btnBorrow);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -121,6 +123,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // btnBorrow
+            // 
+            this.btnBorrow.AutoSize = true;
+            this.btnBorrow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBorrow.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrow.Location = new System.Drawing.Point(383, 3);
+            this.btnBorrow.Name = "btnBorrow";
+            this.btnBorrow.Size = new System.Drawing.Size(202, 34);
+            this.btnBorrow.TabIndex = 17;
+            this.btnBorrow.Text = "BORROW SELECTED";
+            this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
+            // 
             // FormStudentMyEquipmentRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +162,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnBorrow;
     }
 }
