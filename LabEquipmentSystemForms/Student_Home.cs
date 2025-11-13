@@ -35,5 +35,10 @@ namespace LabEquipmentSystemForms
         {
             timeMenuItem.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void logoutMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
