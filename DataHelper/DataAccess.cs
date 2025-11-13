@@ -11,7 +11,7 @@ namespace DataHelper
 {
     public class DataAccess
     {
-        public static string conStr = $@"";
+        public static string conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\MasterDB.mdf;Integrated Security=True";
 
 
 

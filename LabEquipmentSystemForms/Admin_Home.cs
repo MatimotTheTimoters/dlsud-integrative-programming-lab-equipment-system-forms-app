@@ -19,6 +19,7 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
 
             this.adminID = adminID;
+            welcomeMessageMenuItem.Text = "Welcome, " + adminID;
         }
 
         private void addNewStudentMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace LabEquipmentSystemForms
         {
             FormAdminProcessEquipmentRequests formAdminProcessEquipmentRequests = new FormAdminProcessEquipmentRequests(adminID);
             FormHelper.MDIHelper.LoadChildForm(formAdminProcessEquipmentRequests, this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timeMenuItem.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }
