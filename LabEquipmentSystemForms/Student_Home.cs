@@ -49,7 +49,16 @@ namespace LabEquipmentSystemForms
         }
         private void logoutMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult response = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (response == DialogResult.Yes)
+            {
+                MessageBox.Show("You have been logged out.", "Logged Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Logout cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
     }
