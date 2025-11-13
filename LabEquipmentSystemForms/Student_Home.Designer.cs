@@ -46,11 +46,12 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.equipmentMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(83, 537);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +61,7 @@
             this.requestsMenuItem,
             this.transactionsMenuItem});
             this.equipmentMenuItem.Name = "equipmentMenuItem";
-            this.equipmentMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.equipmentMenuItem.Size = new System.Drawing.Size(70, 19);
             this.equipmentMenuItem.Text = "Equipment";
             // 
             // requestsMenuItem
@@ -69,20 +70,20 @@
             this.makeNewRequestMenuItem,
             this.viewMyRequestsMenuItem});
             this.requestsMenuItem.Name = "requestsMenuItem";
-            this.requestsMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.requestsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.requestsMenuItem.Text = "Requests";
             // 
             // makeNewRequestMenuItem
             // 
             this.makeNewRequestMenuItem.Name = "makeNewRequestMenuItem";
-            this.makeNewRequestMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.makeNewRequestMenuItem.Size = new System.Drawing.Size(180, 22);
             this.makeNewRequestMenuItem.Text = "Make New Request";
             this.makeNewRequestMenuItem.Click += new System.EventHandler(this.makeNewRequestMenuItem_Click);
             // 
             // viewMyRequestsMenuItem
             // 
             this.viewMyRequestsMenuItem.Name = "viewMyRequestsMenuItem";
-            this.viewMyRequestsMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewMyRequestsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewMyRequestsMenuItem.Text = "View My Requests";
             // 
             // transactionsMenuItem
@@ -90,7 +91,7 @@
             this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewMyTransactionsMenuItem});
             this.transactionsMenuItem.Name = "transactionsMenuItem";
-            this.transactionsMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.transactionsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transactionsMenuItem.Text = "Transactions";
             // 
             // viewMyTransactionsMenuItem

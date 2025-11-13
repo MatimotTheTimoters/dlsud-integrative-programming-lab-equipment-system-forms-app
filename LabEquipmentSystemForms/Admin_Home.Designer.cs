@@ -50,13 +50,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentMenuItem,
             this.equipmentMenuItem,
             this.transactionsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(980, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 533);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,20 +67,20 @@
             this.addNewStudentMenuItem,
             this.viewStudentsMenuItem});
             this.studentMenuItem.Name = "studentMenuItem";
-            this.studentMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.studentMenuItem.Size = new System.Drawing.Size(113, 19);
             this.studentMenuItem.Text = "Student";
             // 
             // addNewStudentMenuItem
             // 
             this.addNewStudentMenuItem.Name = "addNewStudentMenuItem";
-            this.addNewStudentMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.addNewStudentMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewStudentMenuItem.Text = "Add New Student";
             this.addNewStudentMenuItem.Click += new System.EventHandler(this.addNewStudentMenuItem_Click);
             // 
             // viewStudentsMenuItem
             // 
             this.viewStudentsMenuItem.Name = "viewStudentsMenuItem";
-            this.viewStudentsMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.viewStudentsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewStudentsMenuItem.Text = "View Students";
             this.viewStudentsMenuItem.Click += new System.EventHandler(this.viewStudentsMenuItem_Click);
             // 
@@ -90,7 +91,7 @@
             this.viewEquipmentMenuItem,
             this.editEquipmentMenuItem});
             this.equipmentMenuItem.Name = "equipmentMenuItem";
-            this.equipmentMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.equipmentMenuItem.Size = new System.Drawing.Size(113, 19);
             this.equipmentMenuItem.Text = "Equipment";
             // 
             // addNewEquipmentMenuItem
@@ -120,7 +121,7 @@
             this.processRequestsMenuItem,
             this.viewTransactionsMenuItem});
             this.transactionsMenuItem.Name = "transactionsMenuItem";
-            this.transactionsMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.transactionsMenuItem.Size = new System.Drawing.Size(113, 19);
             this.transactionsMenuItem.Text = "Transactions";
             // 
             // processRequestsMenuItem
