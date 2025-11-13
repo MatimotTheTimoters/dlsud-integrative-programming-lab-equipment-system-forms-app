@@ -1,4 +1,5 @@
-﻿using LabEquipmentSystemForms.FormHelper;
+﻿using DataHelper;
+using LabEquipmentSystemForms.FormHelper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,19 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
 
             this.studentID = studentID;
+            string fullName = DataAccess.GetStudentFullName(studentID);
+            welcomeMessageMenuItem.Text = $"Welcome, {fullName}!";
         }
 
         private void makeNewRequestMenuItem_Click(object sender, EventArgs e)
         {
             FormStudentRequestEquipment requestEquipmentForm = new FormStudentRequestEquipment(studentID);
             MDIHelper.LoadChildForm(requestEquipmentForm, this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timeMenuItem.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }
