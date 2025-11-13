@@ -38,6 +38,7 @@
             this.editEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewTransactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processRequestsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +111,7 @@
             // transactionsMenuItem
             // 
             this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.processRequestsMenuItem,
             this.viewTransactionsMenuItem});
             this.transactionsMenuItem.Name = "transactionsMenuItem";
             this.transactionsMenuItem.Size = new System.Drawing.Size(84, 20);
@@ -121,6 +123,13 @@
             this.viewTransactionsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewTransactionsMenuItem.Text = "View Transactions";
             this.viewTransactionsMenuItem.Click += new System.EventHandler(this.viewTransactionsMenuItem_Click);
+            // 
+            // processRequestsMenuItem
+            // 
+            this.processRequestsMenuItem.Name = "processRequestsMenuItem";
+            this.processRequestsMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.processRequestsMenuItem.Text = "Process Requests";
+            this.processRequestsMenuItem.Click += new System.EventHandler(this.processRequestsMenuItem_Click);
             // 
             // FormAdminHome
             // 
@@ -153,5 +162,6 @@
         private System.Windows.Forms.ToolStripMenuItem editEquipmentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewTransactionsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem processRequestsMenuItem;
     }
 }

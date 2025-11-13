@@ -56,5 +56,11 @@ namespace LabEquipmentSystemForms
             FormAdminViewRecords formAdminViewRecords = new FormAdminViewRecords("Transactions");
             FormHelper.MDIHelper.LoadChildForm(formAdminViewRecords, this);
         }
+
+        private void processRequestsMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminProcessEquipmentRequests formAdminProcessEquipmentRequests = new FormAdminProcessEquipmentRequests(adminID);
+            FormHelper.MDIHelper.LoadChildForm(formAdminProcessEquipmentRequests, this);
+        }
     }
 }
