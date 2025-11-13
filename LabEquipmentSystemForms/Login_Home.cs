@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LabEquipmentSystemForms
 {
-    public partial class FormLogin : Form
+    public partial class FormLoginHome : Form
     {
-        public FormLogin()
+        public FormLoginHome()
         {
             InitializeComponent();
         }

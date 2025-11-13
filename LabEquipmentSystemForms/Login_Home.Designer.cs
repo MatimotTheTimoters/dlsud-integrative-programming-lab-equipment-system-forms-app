@@ -1,6 +1,6 @@
 ﻿namespace LabEquipmentSystemForms
 {
-    partial class FormLogin
+    partial class FormLoginHome
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.adminLoginMenuItem.Text = "Admin Login";
             this.adminLoginMenuItem.Click += new System.EventHandler(this.adminLoginMenuItem_Click);
             // 
-            // FormLogin
+            // FormLoginHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormLogin";
+            this.Name = "FormLoginHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
