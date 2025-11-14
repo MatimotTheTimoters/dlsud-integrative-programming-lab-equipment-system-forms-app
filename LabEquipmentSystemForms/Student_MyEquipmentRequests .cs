@@ -61,6 +61,7 @@ namespace LabEquipmentSystemForms
                 );
 
                 MessageBox.Show("Equipment borrowed successfully. View in Equipment > Transactions > View My Transactions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadMyEquipmentRequests();
                 return;
             }
             else
