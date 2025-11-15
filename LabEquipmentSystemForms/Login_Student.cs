@@ -25,7 +25,7 @@ namespace LabEquipmentSystemForms
             string studentID = txtStudentId.Text.ToString();
             string password = txtPassword.Text.ToString();
 
-            bool success = DataAccess.LoginAdmin(
+            bool success = DataAccess.LoginStudent(
                 studentID,
                 password);
 
