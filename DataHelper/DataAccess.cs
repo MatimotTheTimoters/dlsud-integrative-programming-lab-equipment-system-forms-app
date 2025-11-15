@@ -29,10 +29,7 @@ namespace DataHelper
                 loginCmd.Parameters.AddWithValue("@AdminId", adminID);
                 loginCmd.Parameters.AddWithValue("@Password", password);
                 int count = Convert.ToInt32(loginCmd.ExecuteScalar());
-                if (count >= 0)
-                {
-                    success = true;
-                }
+                success = count == 1;
             }
             return success;
         }
@@ -44,15 +41,12 @@ namespace DataHelper
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand loginCmd = new SqlCommand("Login_User", sqlCon);
+                SqlCommand loginCmd = new SqlCommand("Login_Student", sqlCon);
                 loginCmd.CommandType = CommandType.StoredProcedure;
                 loginCmd.Parameters.AddWithValue("@StudentID", studentID);
                 loginCmd.Parameters.AddWithValue("@Password", password);
                 int count = Convert.ToInt32(loginCmd.ExecuteScalar());
-                if (count >= 0)
-                {
-                    success = true;
-                }
+                success = count == 1;
             }
             return success;
         }
