@@ -111,6 +111,22 @@ namespace DataHelper
 
         }
 
+        public static bool UpdateStudentPassword(string studentID, string newPassword)
+        {
+            bool success = false;
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand updatePasswordCmd = new SqlCommand("Admin_UpdateStudentPassword", sqlCon);
+                updatePasswordCmd.CommandType = CommandType.StoredProcedure;
+                updatePasswordCmd.Parameters.AddWithValue("@StudentID", studentID);
+                updatePasswordCmd.Parameters.AddWithValue("@NewPassword", newPassword);
+                int rowsAffected = updatePasswordCmd.ExecuteNonQuery();
+                success = rowsAffected > 0;
+            }
+            return success;
+        }
+
         // Equipment
         public static bool AddEquipment(string equipmentID, string name, int quantity, string description)
         {
