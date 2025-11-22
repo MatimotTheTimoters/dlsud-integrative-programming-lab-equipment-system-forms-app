@@ -49,16 +49,19 @@ namespace LabEquipmentSystemForms
             string status = dataGridView.CurrentRow.Cells["Status"].Value.ToString().ToLower();
 
             // Check Status field
-            if (status.Equals("borrowed"))
+            if (status.Equals("borrowed") ||
+                status.Equals("partially returned"))
             {
                 // If borrowed, execute ReturnEquipment method
                 string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
                 DateTime dateTimeReturned = DateTime.Now;
+                int returnAmount = Convert.ToInt32(txtReturnAmount.Text.ToString());
 
                 bool success = DataAccess.ReturnEquipment(
                     requestID,
                     studentID,
-                    dateTimeReturned
+                    dateTimeReturned,
+                    returnAmount
                 );
 
                 MessageBox.Show("Equipment returned successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
