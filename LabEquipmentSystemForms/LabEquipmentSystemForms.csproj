@@ -93,6 +93,12 @@
     <Compile Include="Admin_ProcessEquipmentRequests.Designer.cs">
       <DependentUpon>Admin_ProcessEquipmentRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_RecoverPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_RecoverPassword.Designer.cs">
+      <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_ViewRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_ProcessEquipmentRequests.resx">
       <DependentUpon>Admin_ProcessEquipmentRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_RecoverPassword.resx">
+      <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_ViewRecords.resx">
       <DependentUpon>Admin_ViewRecords.cs</DependentUpon>
