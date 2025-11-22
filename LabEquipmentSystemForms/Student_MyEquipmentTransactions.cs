@@ -23,6 +23,7 @@ namespace LabEquipmentSystemForms
             InitializeComponent();
 
             this.studentID = studentID;
+            LoadMyEquipmentTransactions();
         }
 
 

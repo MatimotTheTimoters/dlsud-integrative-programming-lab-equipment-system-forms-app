@@ -142,6 +142,7 @@
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(389, 33);
             this.cbFilter.TabIndex = 16;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // txtReturnAmount
             // 
