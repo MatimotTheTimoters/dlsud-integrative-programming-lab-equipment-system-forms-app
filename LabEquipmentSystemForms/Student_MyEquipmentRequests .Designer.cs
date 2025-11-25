@@ -31,7 +31,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBorrow = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,7 +44,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.cbFilter);
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
-            this.flowLayoutPanel1.Controls.Add(this.btnBorrow);
+            this.flowLayoutPanel1.Controls.Add(this.btnOpen);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -83,19 +83,19 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // btnBorrow
+            // btnOpen
             // 
-            this.btnBorrow.AutoSize = true;
-            this.btnBorrow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBorrow.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrow.Location = new System.Drawing.Point(383, 3);
-            this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(202, 34);
-            this.btnBorrow.TabIndex = 17;
-            this.btnBorrow.Text = "BORROW SELECTED";
-            this.btnBorrow.UseVisualStyleBackColor = true;
-            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
+            this.btnOpen.AutoSize = true;
+            this.btnOpen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Location = new System.Drawing.Point(383, 3);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(202, 34);
+            this.btnOpen.TabIndex = 17;
+            this.btnOpen.Text = "OPEN REQUEST";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // lblFilter
             // 
@@ -162,6 +162,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.Button btnOpen;
     }
 }

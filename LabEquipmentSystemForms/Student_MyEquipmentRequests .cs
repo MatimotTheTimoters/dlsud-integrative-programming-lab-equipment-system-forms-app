@@ -39,7 +39,7 @@ namespace LabEquipmentSystemForms
             LoadMyEquipmentRequests();
         }
 
-        private void btnBorrow_Click(object sender, EventArgs e)
+        private void btnOpen_Click(object sender, EventArgs e)
         {
             // Check if row is selected
             if (dataGridView.CurrentRow == null) return;
