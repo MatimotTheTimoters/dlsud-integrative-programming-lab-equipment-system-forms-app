@@ -265,14 +265,14 @@ namespace DataHelper
             }
         }
 
-        public static DataTable ViewMyEquipmentTransactions(string studentID, string status)
+        public static DataTable ViewMyEquipmentTransactions(string studentID, string transactionType)
         {
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 SqlDataAdapter da = new SqlDataAdapter("Student_ViewMyEquipmentTransactions", sqlCon);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@StudentID", studentID);
-                da.SelectCommand.Parameters.AddWithValue("@Status", status);
+                da.SelectCommand.Parameters.AddWithValue("@TransactionType", transactionType);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;
