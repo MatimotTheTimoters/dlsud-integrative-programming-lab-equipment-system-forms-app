@@ -279,18 +279,22 @@ namespace DataHelper
             }
         }
 
-        public static bool BorrowEquipment(string requestID, string studentID, DateTime dateTimeBorrowed)
+        public static bool CreateInventory(string studentID, string requestID, string equipmentID, int borrowedQuantity)
         {
             bool success = false;
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand borrowEquipmentCmd = new SqlCommand("Student_BorrowEquipment", sqlCon);
-                borrowEquipmentCmd.CommandType = CommandType.StoredProcedure;
-                borrowEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
-                borrowEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                borrowEquipmentCmd.Parameters.AddWithValue("@DateTimeBorrowed", dateTimeBorrowed);
-                int rowsAffected = borrowEquipmentCmd.ExecuteNonQuery();
+                SqlCommand createInventoryCmd = new SqlCommand("Student_CreateInventory", sqlCon);
+                createInventoryCmd.CommandType = CommandType.StoredProcedure;
+
+                // Use proper parameter types
+                createInventoryCmd.Parameters.AddWithValue("@StudentID", studentID);
+                createInventoryCmd.Parameters.AddWithValue("@RequestID", Guid.Parse(requestID));
+                createInventoryCmd.Parameters.AddWithValue("@EquipmentID", equipmentID);
+                createInventoryCmd.Parameters.AddWithValue("@BorrowedQuantity", borrowedQuantity);
+
+                int rowsAffected = createInventoryCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
             }
             return success;

@@ -50,24 +50,27 @@ namespace LabEquipmentSystemForms
             // Check Status field
             if (status.Equals("approved"))
             {
-                // If approved, execute BorrowEquipment method
+                // If approved, execute method
                 string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
+                string equipmentID = dataGridView.CurrentRow.Cells["EquipmentID"].Value.ToString();
+                int borrowedQuantity = Convert.ToInt32(dataGridView.CurrentRow.Cells["Quantity"].Value);
                 DateTime dateTimeBorrowed = DateTime.Now;
 
-                bool success = DataAccess.BorrowEquipment(
-                    requestID,
+                bool success = DataAccess.CreateInventory(
                     studentID,
-                    dateTimeBorrowed
+                    requestID,
+                    equipmentID,
+                    borrowedQuantity
                 );
 
-                MessageBox.Show("Equipment borrowed successfully. View in Equipment > Transactions > View My Transactions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Request opened successfully. Entry added to inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMyEquipmentRequests();
                 return;
             }
             else
             {
                 // Else show MessageBox indicating cannot borrow
-                MessageBox.Show("Only approved requests can be borrowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Only approved requests can be opened.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
