@@ -300,7 +300,7 @@ namespace DataHelper
             return success;
         }
 
-        public static bool ReturnEquipment(string requestID, string studentID, DateTime dateTimeReturned, int returnAmount)
+        public static bool ReturnEquipment(string requestID, string studentID, int returnAmount)
         {
             bool success = false;
             using (SqlConnection sqlCon = new SqlConnection(conStr))
@@ -310,12 +310,27 @@ namespace DataHelper
                 returnEquipmentCmd.CommandType = CommandType.StoredProcedure;
                 returnEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
                 returnEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                returnEquipmentCmd.Parameters.AddWithValue("@DateTimeReturned", dateTimeReturned);
                 returnEquipmentCmd.Parameters.AddWithValue("@ReturnAmount", returnAmount);
                 int rowsAffected = returnEquipmentCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
             }
             return success;
+        }
+
+        public static DataTable GetStudentInventory(string studentID, string status = null)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand("Student_GetInventoryByStatus", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@StudentID", studentID);
+                cmd.Parameters.AddWithValue("@Status", status);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
         }
     }
 }
