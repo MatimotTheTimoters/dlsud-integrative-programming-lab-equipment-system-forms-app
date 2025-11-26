@@ -64,7 +64,7 @@
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(215, 33);
             this.cbFilter.TabIndex = 15;
-            this.cbFilter.Click += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
