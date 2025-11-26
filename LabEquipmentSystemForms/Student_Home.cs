@@ -47,6 +47,12 @@ namespace LabEquipmentSystemForms
             FormStudentMyEquipmentTransactions myTransactionsForm = new FormStudentMyEquipmentTransactions(studentID);
             MDIHelper.LoadChildForm(myTransactionsForm, this);
         }
+        private void inventoryMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStudentEquipmentInventory formStudentEquipmentInventory = new FormStudentEquipmentInventory(studentID);
+            MDIHelper.LoadChildForm(formStudentEquipmentInventory, this);
+        }
+
         private void logoutMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult response = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

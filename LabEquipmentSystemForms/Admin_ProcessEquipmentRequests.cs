@@ -24,10 +24,18 @@ namespace LabEquipmentSystemForms
         private void btnApprove_Click(object sender, EventArgs e)
         {
             if (dataGridView.CurrentRow == null) return;
+            // Get status from selected row
+            string status = dataGridView.CurrentRow.Cells["Status"].Value.ToString();
+            if (status.ToLower().Equals("completed")) // If completed, return
+            {
+                MessageBox.Show("Cannot approve a completed request.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
-
-            bool success = DataAccess.ApproveEquipmentRequest(requestID, adminID);
+            string action = "approve";
+            DateTime processDate = DateTime.Now;
+            bool success = DataAccess.ProcessRequest(requestID, adminID, action, processDate);
 
             if (success)
             {
@@ -44,9 +52,18 @@ namespace LabEquipmentSystemForms
         {
             if (dataGridView.CurrentRow == null) return;
 
-            string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
+            // Get status from selected row
+            string status = dataGridView.CurrentRow.Cells["Status"].Value.ToString();
+            if (status.ToLower().Equals("completed")) // If completed, return
+            {
+                MessageBox.Show("Cannot deny a completed request.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            bool success = DataAccess.DenyEquipmentRequest(requestID, adminID);
+            string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
+            string action = "deny";
+            DateTime processDate = DateTime.Now;
+            bool success = DataAccess.ProcessRequest(requestID, adminID, action, processDate);
 
             if (success)
             {

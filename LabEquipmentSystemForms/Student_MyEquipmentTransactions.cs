@@ -15,7 +15,7 @@ namespace LabEquipmentSystemForms
     public partial class FormStudentMyEquipmentTransactions : Form
     {
         private string studentID;
-        private string currentStatus = "";
+        private string currentType = "";
         private BindingSource bs = new BindingSource();
 
         public FormStudentMyEquipmentTransactions(string studentID)
@@ -26,12 +26,11 @@ namespace LabEquipmentSystemForms
             LoadMyEquipmentTransactions();
         }
 
-
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = cbFilter.SelectedItem.ToString();
 
-            currentStatus = (selected == "All") ? "" : selected;
+            currentType = (selected == "All") ? "" : selected;
 
             LoadMyEquipmentTransactions();
         }
@@ -41,46 +40,10 @@ namespace LabEquipmentSystemForms
             LoadMyEquipmentTransactions();
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            // Check if row is selected
-            if (dataGridView.CurrentRow == null) return;
-
-            // Get Status field from currently selected row
-            string status = dataGridView.CurrentRow.Cells["Status"].Value.ToString().ToLower();
-
-            // Check Status field
-            if (status.Equals("borrowed") ||
-                status.Equals("partially returned"))
-            {
-                // If borrowed, execute ReturnEquipment method
-                string requestID = dataGridView.CurrentRow.Cells["RequestID"].Value.ToString();
-                DateTime dateTimeReturned = DateTime.Now;
-                int returnAmount = Convert.ToInt32(txtReturnAmount.Text.ToString());
-
-                bool success = DataAccess.ReturnEquipment(
-                    requestID,
-                    studentID,
-                    dateTimeReturned,
-                    returnAmount
-                );
-
-                MessageBox.Show("Equipment returned successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadMyEquipmentTransactions();
-                return;
-            }
-            else
-            {
-                // Else show MessageBox indicating cannot return
-                MessageBox.Show("Only borrowed requests can be returned.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-        }
-
         private void LoadMyEquipmentTransactions()
         {
             dataGridView.DataSource = null;
-            DataTable dt = DataAccess.ViewMyEquipmentTransactions(studentID, currentStatus);
+            DataTable dt = DataAccess.ViewMyEquipmentTransactions(studentID, currentType);
             bs.DataSource = dt;
             dataGridView.DataSource = bs;
         }

@@ -185,33 +185,19 @@ namespace DataHelper
         }
 
         // Requests
-        public static bool ApproveEquipmentRequest(string requestID, string adminID)
+        public static bool ProcessRequest(string requestID, string adminID, string action, DateTime processDate)
         {
             bool success = false;
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand approveRequestCmd = new SqlCommand("Admin_ApproveEquipmentRequest", sqlCon);
-                approveRequestCmd.CommandType = CommandType.StoredProcedure;
-                approveRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
-                approveRequestCmd.Parameters.AddWithValue("@AdminID", adminID);
-                int rowsAffected = approveRequestCmd.ExecuteNonQuery();
-                success = rowsAffected > 0;
-            }
-            return success;
-        }
-
-        public static bool DenyEquipmentRequest(string requestID, string adminID)
-        {
-            bool success = false;
-            using (SqlConnection sqlCon = new SqlConnection(conStr))
-            {
-                sqlCon.Open();
-                SqlCommand denyRequestCmd = new SqlCommand("Admin_DenyEquipmentRequest", sqlCon);
-                denyRequestCmd.CommandType = CommandType.StoredProcedure;
-                denyRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
-                denyRequestCmd.Parameters.AddWithValue("@AdminID", adminID);
-                int rowsAffected = denyRequestCmd.ExecuteNonQuery();
+                SqlCommand processRequestCmd = new SqlCommand("Admin_ProcessRequest", sqlCon);
+                processRequestCmd.CommandType = CommandType.StoredProcedure;
+                processRequestCmd.Parameters.AddWithValue("@RequestID", requestID);
+                processRequestCmd.Parameters.AddWithValue("@HandledBy", adminID);
+                processRequestCmd.Parameters.AddWithValue("@Action", action);
+                processRequestCmd.Parameters.AddWithValue("@ProcessDate", processDate);
+                int rowsAffected = processRequestCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
             }
             return success;
@@ -279,38 +265,42 @@ namespace DataHelper
             }
         }
 
-        public static DataTable ViewMyEquipmentTransactions(string studentID, string status)
+        public static DataTable ViewMyEquipmentTransactions(string studentID, string transactionType)
         {
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 SqlDataAdapter da = new SqlDataAdapter("Student_ViewMyEquipmentTransactions", sqlCon);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@StudentID", studentID);
-                da.SelectCommand.Parameters.AddWithValue("@Status", status);
+                da.SelectCommand.Parameters.AddWithValue("@TransactionType", transactionType);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;
             }
         }
 
-        public static bool BorrowEquipment(string requestID, string studentID, DateTime dateTimeBorrowed)
+        public static bool CreateInventory(string studentID, string requestID, string equipmentID, int borrowedQuantity)
         {
             bool success = false;
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 sqlCon.Open();
-                SqlCommand borrowEquipmentCmd = new SqlCommand("Student_BorrowEquipment", sqlCon);
-                borrowEquipmentCmd.CommandType = CommandType.StoredProcedure;
-                borrowEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
-                borrowEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                borrowEquipmentCmd.Parameters.AddWithValue("@DateTimeBorrowed", dateTimeBorrowed);
-                int rowsAffected = borrowEquipmentCmd.ExecuteNonQuery();
+                SqlCommand createInventoryCmd = new SqlCommand("Student_CreateInventory", sqlCon);
+                createInventoryCmd.CommandType = CommandType.StoredProcedure;
+
+                // Use proper parameter types
+                createInventoryCmd.Parameters.AddWithValue("@StudentID", studentID);
+                createInventoryCmd.Parameters.AddWithValue("@RequestID", Guid.Parse(requestID));
+                createInventoryCmd.Parameters.AddWithValue("@EquipmentID", equipmentID);
+                createInventoryCmd.Parameters.AddWithValue("@BorrowedQuantity", borrowedQuantity);
+
+                int rowsAffected = createInventoryCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
             }
             return success;
         }
 
-        public static bool ReturnEquipment(string requestID, string studentID, DateTime dateTimeReturned, int returnAmount)
+        public static bool ReturnEquipment(string requestID, string studentID, int returnAmount)
         {
             bool success = false;
             using (SqlConnection sqlCon = new SqlConnection(conStr))
@@ -320,12 +310,27 @@ namespace DataHelper
                 returnEquipmentCmd.CommandType = CommandType.StoredProcedure;
                 returnEquipmentCmd.Parameters.AddWithValue("@RequestID", requestID);
                 returnEquipmentCmd.Parameters.AddWithValue("@StudentID", studentID);
-                returnEquipmentCmd.Parameters.AddWithValue("@DateTimeReturned", dateTimeReturned);
                 returnEquipmentCmd.Parameters.AddWithValue("@ReturnAmount", returnAmount);
                 int rowsAffected = returnEquipmentCmd.ExecuteNonQuery();
                 success = rowsAffected > 0;
             }
             return success;
+        }
+
+        public static DataTable GetStudentInventory(string studentID, string status = null)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(conStr))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand("Student_GetInventoryByStatus", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@StudentID", studentID);
+                cmd.Parameters.AddWithValue("@Status", status);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
         }
     }
 }
