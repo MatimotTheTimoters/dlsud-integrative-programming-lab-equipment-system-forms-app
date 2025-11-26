@@ -14,12 +14,14 @@ namespace LabEquipmentSystemForms
     public partial class FormStudentEquipmentInventory : Form
     {
         private string studentID;
+        private string currentStatus = "";
         private BindingSource bs = new BindingSource();
 
         public FormStudentEquipmentInventory(string studentID)
         {
             InitializeComponent();
             this.studentID = studentID;
+            BindDataSourceToControls();
             LoadStudentInventory();
         }
 
@@ -28,12 +30,10 @@ namespace LabEquipmentSystemForms
             try
             {
                 // Assuming you have a method to get student's inventory
-                DataTable dt = DataAccess.GetStudentInventory(studentID);
+                DataTable dt = DataAccess.GetStudentInventory(studentID, currentStatus);
                 bs.DataSource = dt;
                 dataGridView.DataSource = bs;
 
-                // Set up data binding for textboxes if needed
-                BindDataSourceToControls();
             }
             catch (Exception ex)
             {
@@ -140,18 +140,26 @@ namespace LabEquipmentSystemForms
                           MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbFilter.SelectedItem != null)
+            {
+                string selected = cbFilter.SelectedItem.ToString();
+
+                // Use the same logic pattern as the requests form
+                currentStatus = (selected == "All") ? "" : selected;
+
+                LoadStudentInventory();
+            }
+        }
+
         private void dataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            // Check if there is a current row selected
             if (dataGridView.CurrentRow != null)
             {
+                // Update binding source position to match DataGridView selection
                 bs.Position = dataGridView.CurrentRow.Index;
-
-                // Update the maximum return amount based on remaining quantity
-                if (dataGridView.CurrentRow.Cells["RemainingQuantity"].Value != null)
-                {
-                    int remainingQty = Convert.ToInt32(dataGridView.CurrentRow.Cells["RemainingQuantity"].Value);
-                    txtReturnAmount.Text = remainingQty.ToString();
-                }
             }
         }
     }

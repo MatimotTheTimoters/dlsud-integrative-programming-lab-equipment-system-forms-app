@@ -33,15 +33,15 @@
             this.txtReturnAmount = new System.Windows.Forms.TextBox();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblEquipmentId = new System.Windows.Forms.Label();
             this.txtEquipmentID = new System.Windows.Forms.TextBox();
+            this.lblEquipmentId = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFilter
@@ -91,6 +91,7 @@
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(387, 33);
             this.cbFilter.TabIndex = 16;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -118,31 +119,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 457);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // dataGridView
+            // txtEquipmentID
             // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 3);
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 183);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(874, 271);
-            this.dataGridView.TabIndex = 10;
-            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
+            this.txtEquipmentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtEquipmentID.Location = new System.Drawing.Point(223, 51);
+            this.txtEquipmentID.Name = "txtEquipmentID";
+            this.txtEquipmentID.ReadOnly = true;
+            this.txtEquipmentID.Size = new System.Drawing.Size(434, 32);
+            this.txtEquipmentID.TabIndex = 21;
             // 
-            // btnReturn
+            // lblEquipmentId
             // 
-            this.btnReturn.AutoSize = true;
-            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(115, 3);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(202, 34);
-            this.btnReturn.TabIndex = 17;
-            this.btnReturn.Text = "RETURN SELECTED";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            this.lblEquipmentId.AutoSize = true;
+            this.lblEquipmentId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipmentId.Location = new System.Drawing.Point(3, 45);
+            this.lblEquipmentId.Name = "lblEquipmentId";
+            this.lblEquipmentId.Size = new System.Drawing.Size(214, 45);
+            this.lblEquipmentId.TabIndex = 19;
+            this.lblEquipmentId.Text = "EQUIPMENT ID";
+            this.lblEquipmentId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnRefresh);
+            this.flowLayoutPanel2.Controls.Add(this.btnReturn);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(223, 138);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(434, 39);
+            this.flowLayoutPanel2.TabIndex = 17;
+            this.flowLayoutPanel2.WrapContents = false;
             // 
             // btnRefresh
             // 
@@ -158,38 +166,31 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // flowLayoutPanel2
+            // btnReturn
             // 
-            this.flowLayoutPanel2.Controls.Add(this.btnRefresh);
-            this.flowLayoutPanel2.Controls.Add(this.btnReturn);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(223, 138);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(434, 39);
-            this.flowLayoutPanel2.TabIndex = 17;
-            this.flowLayoutPanel2.WrapContents = false;
+            this.btnReturn.AutoSize = true;
+            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(115, 3);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(202, 34);
+            this.btnReturn.TabIndex = 17;
+            this.btnReturn.Text = "RETURN SELECTED";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // lblEquipmentId
+            // dataGridView
             // 
-            this.lblEquipmentId.AutoSize = true;
-            this.lblEquipmentId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquipmentId.Location = new System.Drawing.Point(3, 45);
-            this.lblEquipmentId.Name = "lblEquipmentId";
-            this.lblEquipmentId.Size = new System.Drawing.Size(214, 45);
-            this.lblEquipmentId.TabIndex = 19;
-            this.lblEquipmentId.Text = "EQUIPMENT ID";
-            this.lblEquipmentId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtEquipmentID
-            // 
-            this.txtEquipmentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtEquipmentID.Location = new System.Drawing.Point(223, 51);
-            this.txtEquipmentID.Name = "txtEquipmentID";
-            this.txtEquipmentID.ReadOnly = true;
-            this.txtEquipmentID.Size = new System.Drawing.Size(434, 32);
-            this.txtEquipmentID.TabIndex = 21;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 3);
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(3, 183);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(874, 271);
+            this.dataGridView.TabIndex = 10;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // FormStudentEquipmentInventory
             // 
@@ -202,9 +203,9 @@
             this.Text = "Equipment Inventory";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
