@@ -11,8 +11,6 @@ namespace LabEquipmentSystemForms.FormHelper
     {
         public static void LoadChildForm(Form newChildForm, Form parentForm)
         {
-            CloseAllChildForms(parentForm);
-
             // Check if the form is already open
             foreach (Form childForm in parentForm.MdiChildren)
             {
@@ -20,6 +18,8 @@ namespace LabEquipmentSystemForms.FormHelper
                 {
                     // If the form is already open, activate it and return
                     childForm.Activate();
+                    childForm.BringToFront();
+                    newChildForm.Dispose();
                     return;
                 }
             }
