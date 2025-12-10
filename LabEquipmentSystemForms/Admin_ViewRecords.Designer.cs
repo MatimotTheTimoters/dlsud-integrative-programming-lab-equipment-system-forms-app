@@ -60,7 +60,7 @@
             // 
             this.lblDataSource.AutoSize = true;
             this.lblDataSource.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDataSource.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataSource.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblDataSource.Location = new System.Drawing.Point(3, 0);
             this.lblDataSource.Name = "lblDataSource";
             this.lblDataSource.Size = new System.Drawing.Size(214, 45);
@@ -92,7 +92,7 @@
             // cbGender
             // 
             this.cbGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Students",
@@ -109,7 +109,7 @@
             // 
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.Location = new System.Drawing.Point(271, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(106, 34);

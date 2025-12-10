@@ -77,7 +77,7 @@
             this.lblPassword.Size = new System.Drawing.Size(169, 60);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "PASSWORD";
-            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblAdminId
             // 
@@ -89,7 +89,7 @@
             this.lblAdminId.Size = new System.Drawing.Size(169, 60);
             this.lblAdminId.TabIndex = 0;
             this.lblAdminId.Text = "ADMIN ID";
-            this.lblAdminId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAdminId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtAdminId
             // 
