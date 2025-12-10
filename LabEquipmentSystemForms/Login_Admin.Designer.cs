@@ -39,6 +39,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
@@ -47,34 +48,33 @@
             this.tableLayoutPanel1.Controls.Add(this.lblAdminId, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtAdminId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnLogin, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(90, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 457);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 300);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(223, 111);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtPassword.Location = new System.Drawing.Point(178, 72);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(654, 50);
+            this.txtPassword.Size = new System.Drawing.Size(519, 36);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(3, 91);
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblPassword.Location = new System.Drawing.Point(3, 60);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(214, 91);
+            this.lblPassword.Size = new System.Drawing.Size(169, 60);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "PASSWORD";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,10 +83,10 @@
             // 
             this.lblAdminId.AutoSize = true;
             this.lblAdminId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAdminId.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminId.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblAdminId.Location = new System.Drawing.Point(3, 0);
             this.lblAdminId.Name = "lblAdminId";
-            this.lblAdminId.Size = new System.Drawing.Size(214, 91);
+            this.lblAdminId.Size = new System.Drawing.Size(169, 60);
             this.lblAdminId.TabIndex = 0;
             this.lblAdminId.Text = "ADMIN ID";
             this.lblAdminId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,20 +94,20 @@
             // txtAdminId
             // 
             this.txtAdminId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdminId.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdminId.Location = new System.Drawing.Point(223, 20);
+            this.txtAdminId.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtAdminId.Location = new System.Drawing.Point(178, 12);
             this.txtAdminId.Name = "txtAdminId";
-            this.txtAdminId.Size = new System.Drawing.Size(654, 50);
+            this.txtAdminId.Size = new System.Drawing.Size(519, 36);
             this.txtAdminId.TabIndex = 1;
             // 
             // btnLogin
             // 
             this.btnLogin.AutoSize = true;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(223, 185);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Location = new System.Drawing.Point(178, 123);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 39);
+            this.btnLogin.Size = new System.Drawing.Size(120, 24);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
