@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.requestsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeNewRequestMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMyRequestsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMyTransactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.welcomeMessageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.requestsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeNewRequestMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMyRequestsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMyTransactionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +54,54 @@
             this.inventoryMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(126, 537);
+            this.menuStrip1.Size = new System.Drawing.Size(90, 537);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // requestsMenuItem
+            // 
+            this.requestsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeNewRequestMenuItem,
+            this.viewMyRequestsMenuItem});
+            this.requestsMenuItem.Name = "requestsMenuItem";
+            this.requestsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.requestsMenuItem.Text = "Requests";
+            // 
+            // makeNewRequestMenuItem
+            // 
+            this.makeNewRequestMenuItem.Name = "makeNewRequestMenuItem";
+            this.makeNewRequestMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.makeNewRequestMenuItem.Text = "Make New Request";
+            this.makeNewRequestMenuItem.Click += new System.EventHandler(this.makeNewRequestMenuItem_Click);
+            // 
+            // viewMyRequestsMenuItem
+            // 
+            this.viewMyRequestsMenuItem.Name = "viewMyRequestsMenuItem";
+            this.viewMyRequestsMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewMyRequestsMenuItem.Text = "View My Requests";
+            this.viewMyRequestsMenuItem.Click += new System.EventHandler(this.viewMyRequestsMenuItem_Click);
+            // 
+            // transactionsMenuItem
+            // 
+            this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewMyTransactionsMenuItem});
+            this.transactionsMenuItem.Name = "transactionsMenuItem";
+            this.transactionsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.transactionsMenuItem.Text = "Transactions";
+            // 
+            // viewMyTransactionsMenuItem
+            // 
+            this.viewMyTransactionsMenuItem.Name = "viewMyTransactionsMenuItem";
+            this.viewMyTransactionsMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.viewMyTransactionsMenuItem.Text = "View My Transactions";
+            this.viewMyTransactionsMenuItem.Click += new System.EventHandler(this.viewMyTransactionsMenuItem_Click);
+            // 
+            // inventoryMenuItem
+            // 
+            this.inventoryMenuItem.Name = "inventoryMenuItem";
+            this.inventoryMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.inventoryMenuItem.Text = "Inventory";
+            this.inventoryMenuItem.Click += new System.EventHandler(this.inventoryMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -99,51 +144,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // requestsMenuItem
-            // 
-            this.requestsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makeNewRequestMenuItem,
-            this.viewMyRequestsMenuItem});
-            this.requestsMenuItem.Name = "requestsMenuItem";
-            this.requestsMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.requestsMenuItem.Text = "Requests";
-            // 
-            // transactionsMenuItem
-            // 
-            this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewMyTransactionsMenuItem});
-            this.transactionsMenuItem.Name = "transactionsMenuItem";
-            this.transactionsMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.transactionsMenuItem.Text = "Transactions";
-            // 
-            // makeNewRequestMenuItem
-            // 
-            this.makeNewRequestMenuItem.Name = "makeNewRequestMenuItem";
-            this.makeNewRequestMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.makeNewRequestMenuItem.Text = "Make New Request";
-            this.makeNewRequestMenuItem.Click += new System.EventHandler(this.makeNewRequestMenuItem_Click);
-            // 
-            // viewMyRequestsMenuItem
-            // 
-            this.viewMyRequestsMenuItem.Name = "viewMyRequestsMenuItem";
-            this.viewMyRequestsMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.viewMyRequestsMenuItem.Text = "View My Requests";
-            this.viewMyRequestsMenuItem.Click += new System.EventHandler(this.viewMyRequestsMenuItem_Click);
-            // 
-            // viewMyTransactionsMenuItem
-            // 
-            this.viewMyTransactionsMenuItem.Name = "viewMyTransactionsMenuItem";
-            this.viewMyTransactionsMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.viewMyTransactionsMenuItem.Text = "View My Transactions";
-            this.viewMyTransactionsMenuItem.Click += new System.EventHandler(this.viewMyTransactionsMenuItem_Click);
-            // 
-            // inventoryMenuItem
-            // 
-            this.inventoryMenuItem.Name = "inventoryMenuItem";
-            this.inventoryMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.inventoryMenuItem.Text = "Inventory";
-            this.inventoryMenuItem.Click += new System.EventHandler(this.inventoryMenuItem_Click);
-            // 
             // FormStudentHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +151,7 @@
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormStudentHome";
