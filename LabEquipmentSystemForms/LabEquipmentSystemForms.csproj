@@ -126,11 +126,16 @@
     <Compile Include="Admin_RecoverPassword.Designer.cs">
       <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Reports.cs">
+    <Compile Include="Admin_ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin_ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Reports.Designer.cs">
-      <DependentUpon>Admin_Reports.cs</DependentUpon>
+    <Compile Include="Admin_ReportViewer.Designer.cs">
+      <DependentUpon>Admin_ReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_ViewRecords.cs">
       <SubType>Form</SubType>
@@ -207,8 +212,9 @@
     <EmbeddedResource Include="Admin_RecoverPassword.resx">
       <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Reports.resx">
-      <DependentUpon>Admin_Reports.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_ReportEditor.rdlc" />
+    <EmbeddedResource Include="Admin_ReportViewer.resx">
+      <DependentUpon>Admin_ReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_ViewRecords.resx">
       <DependentUpon>Admin_ViewRecords.cs</DependentUpon>
@@ -246,6 +252,17 @@
     <EmbeddedResource Include="Student_Home.resx">
       <DependentUpon>Student_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Admin_ReportDataSet.xsc">
+      <DependentUpon>Admin_ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Admin_ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Admin_ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Admin_ReportDataSet.xss">
+      <DependentUpon>Admin_ReportDataSet.xsd</DependentUpon>
+    </None>
     <None Include="database\.vs\database\CopilotIndices\17.14.1231.31060\CodeChunks.db" />
     <None Include="database\.vs\database\CopilotIndices\17.14.1231.31060\SemanticSymbols.db" />
     <None Include="database\.vs\database\FileContentIndex\afb3deb2-86b1-422b-8808-045ef271e4fa.vsidx" />
