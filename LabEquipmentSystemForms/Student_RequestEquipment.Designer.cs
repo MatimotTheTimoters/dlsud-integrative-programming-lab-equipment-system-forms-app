@@ -51,14 +51,13 @@
             this.tableLayoutPanel1.Controls.Add(this.txtEquipmentId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEquipmentID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 461);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -66,8 +65,8 @@
             // 
             this.btnRequest.AutoSize = true;
             this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequest.Location = new System.Drawing.Point(224, 187);
+            this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnRequest.Location = new System.Drawing.Point(224, 95);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(184, 39);
             this.btnRequest.TabIndex = 9;
@@ -78,10 +77,10 @@
             // nudQuantity
             // 
             this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(224, 113);
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.nudQuantity.Location = new System.Drawing.Point(224, 53);
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(657, 50);
+            this.nudQuantity.Size = new System.Drawing.Size(657, 32);
             this.nudQuantity.TabIndex = 7;
             this.nudQuantity.Value = new decimal(new int[] {
             10,
@@ -93,10 +92,10 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(3, 92);
+            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblQuantity.Location = new System.Drawing.Point(3, 46);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(215, 92);
+            this.lblQuantity.Size = new System.Drawing.Size(215, 46);
             this.lblQuantity.TabIndex = 6;
             this.lblQuantity.Text = "QUANTITY";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,33 +103,33 @@
             // txtEquipmentId
             // 
             this.txtEquipmentId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEquipmentId.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipmentId.Location = new System.Drawing.Point(224, 21);
+            this.txtEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtEquipmentId.Location = new System.Drawing.Point(224, 7);
             this.txtEquipmentId.Name = "txtEquipmentId";
             this.txtEquipmentId.ReadOnly = true;
-            this.txtEquipmentId.Size = new System.Drawing.Size(657, 50);
+            this.txtEquipmentId.Size = new System.Drawing.Size(657, 32);
             this.txtEquipmentId.TabIndex = 2;
             // 
             // lblEquipmentID
             // 
             this.lblEquipmentID.AutoSize = true;
             this.lblEquipmentID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblEquipmentID.Location = new System.Drawing.Point(3, 0);
             this.lblEquipmentID.Name = "lblEquipmentID";
-            this.lblEquipmentID.Size = new System.Drawing.Size(215, 92);
+            this.lblEquipmentID.Size = new System.Drawing.Size(215, 46);
             this.lblEquipmentID.TabIndex = 1;
             this.lblEquipmentID.Text = "EQUIPMENT ID";
-            this.lblEquipmentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEquipmentID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 2);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 233);
+            this.dataGridView.Location = new System.Drawing.Point(3, 141);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(878, 225);
+            this.dataGridView.Size = new System.Drawing.Size(878, 317);
             this.dataGridView.TabIndex = 10;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
