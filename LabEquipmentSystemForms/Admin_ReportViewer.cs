@@ -57,6 +57,7 @@ namespace LabEquipmentSystemForms
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipment", DataAccess.ViewEquipment());
             reportViewer1.LocalReport.ReportPath = rdlcPath;
             reportViewer1.LocalReport.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
         }
 
         private void equipmentRequestsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace LabEquipmentSystemForms
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentTransactions", DataAccess.ViewEquipmentTransactions());
             reportViewer1.LocalReport.ReportPath = rdlcPath;
             reportViewer1.LocalReport.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
         }
 
         private void DisplayEquipmentRequests(string status)
@@ -94,6 +96,14 @@ namespace LabEquipmentSystemForms
             reportViewer1.LocalReport.ReportPath = rdlcPath;
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
+        }
+
+        private void returnToHomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminHome homeForm = new FormAdminHome(adminID);
+            homeForm.Show();
+            this.Close();
+            homeForm.Focus();
         }
     }
 }

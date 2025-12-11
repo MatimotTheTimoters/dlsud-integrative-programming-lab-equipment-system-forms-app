@@ -33,6 +33,7 @@
             this.studentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.passwordRecoveryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEquipmentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,7 @@
             this.timeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.passwordRecoveryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentMenuItem,
             this.equipmentMenuItem,
-            this.transactionsMenuItem});
+            this.transactionsMenuItem,
+            this.reportsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(126, 533);
@@ -76,16 +78,23 @@
             // addNewStudentMenuItem
             // 
             this.addNewStudentMenuItem.Name = "addNewStudentMenuItem";
-            this.addNewStudentMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewStudentMenuItem.Size = new System.Drawing.Size(175, 22);
             this.addNewStudentMenuItem.Text = "Add New Student";
             this.addNewStudentMenuItem.Click += new System.EventHandler(this.addNewStudentMenuItem_Click);
             // 
             // viewStudentsMenuItem
             // 
             this.viewStudentsMenuItem.Name = "viewStudentsMenuItem";
-            this.viewStudentsMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewStudentsMenuItem.Size = new System.Drawing.Size(175, 22);
             this.viewStudentsMenuItem.Text = "View Students";
             this.viewStudentsMenuItem.Click += new System.EventHandler(this.viewStudentsMenuItem_Click);
+            // 
+            // passwordRecoveryMenuItem
+            // 
+            this.passwordRecoveryMenuItem.Name = "passwordRecoveryMenuItem";
+            this.passwordRecoveryMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.passwordRecoveryMenuItem.Text = "Password Recovery";
+            this.passwordRecoveryMenuItem.Click += new System.EventHandler(this.passwordRecoveryMenuItem_Click);
             // 
             // equipmentMenuItem
             // 
@@ -182,12 +191,12 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // passwordRecoveryMenuItem
+            // reportsMenuItem
             // 
-            this.passwordRecoveryMenuItem.Name = "passwordRecoveryMenuItem";
-            this.passwordRecoveryMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.passwordRecoveryMenuItem.Text = "Password Recovery";
-            this.passwordRecoveryMenuItem.Click += new System.EventHandler(this.passwordRecoveryMenuItem_Click);
+            this.reportsMenuItem.Name = "reportsMenuItem";
+            this.reportsMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.reportsMenuItem.Text = "Reports";
+            this.reportsMenuItem.Click += new System.EventHandler(this.reportsMenuItem_Click);
             // 
             // FormAdminHome
             // 
@@ -230,5 +239,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem logoutMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passwordRecoveryMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsMenuItem;
     }
 }

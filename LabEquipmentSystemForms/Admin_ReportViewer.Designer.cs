@@ -42,6 +42,7 @@
             this.equipmentTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.returnToHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeMessageMenuItem,
             this.timeMenuItem,
-            this.filterToolStripMenuItem});
+            this.filterToolStripMenuItem,
+            this.returnToHomeToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(984, 24);
@@ -149,6 +151,13 @@
             this.reportViewer1.Size = new System.Drawing.Size(984, 537);
             this.reportViewer1.TabIndex = 5;
             // 
+            // returnToHomeToolStripMenuItem
+            // 
+            this.returnToHomeToolStripMenuItem.Name = "returnToHomeToolStripMenuItem";
+            this.returnToHomeToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.returnToHomeToolStripMenuItem.Text = "Return to Home";
+            this.returnToHomeToolStripMenuItem.Click += new System.EventHandler(this.returnToHomeToolStripMenuItem_Click);
+            // 
             // FormAdminReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,5 +192,6 @@
         private System.Windows.Forms.ToolStripMenuItem approvedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deniedToolStripMenuItem;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.ToolStripMenuItem returnToHomeToolStripMenuItem;
     }
 }
