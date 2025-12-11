@@ -288,7 +288,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="database\generate_masterdb.sql" />
+    <Content Include="database\schema.sql" />
+    <Content Include="database\seed.sql" />
     <Content Include="MasterDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
