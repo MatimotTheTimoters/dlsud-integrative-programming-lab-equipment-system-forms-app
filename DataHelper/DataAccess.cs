@@ -216,7 +216,7 @@ namespace DataHelper
             }
         }
 
-        public static DataTable ViewEquipmentTransactions(string transactionType = null)
+        public static DataTable ViewEquipmentTransactions(string transactionType = "all")
         {
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {

@@ -39,13 +39,13 @@
             this.pendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.approvedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deniedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.completedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.completedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,23 +115,30 @@
             // pendingToolStripMenuItem
             // 
             this.pendingToolStripMenuItem.Name = "pendingToolStripMenuItem";
-            this.pendingToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.pendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pendingToolStripMenuItem.Text = "Pending";
             this.pendingToolStripMenuItem.Click += new System.EventHandler(this.pendingToolStripMenuItem_Click);
             // 
             // approvedToolStripMenuItem
             // 
             this.approvedToolStripMenuItem.Name = "approvedToolStripMenuItem";
-            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.approvedToolStripMenuItem.Text = "Approved";
             this.approvedToolStripMenuItem.Click += new System.EventHandler(this.approvedToolStripMenuItem_Click);
             // 
             // deniedToolStripMenuItem
             // 
             this.deniedToolStripMenuItem.Name = "deniedToolStripMenuItem";
-            this.deniedToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.deniedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deniedToolStripMenuItem.Text = "Denied";
             this.deniedToolStripMenuItem.Click += new System.EventHandler(this.deniedToolStripMenuItem_Click);
+            // 
+            // completedToolStripMenuItem
+            // 
+            this.completedToolStripMenuItem.Name = "completedToolStripMenuItem";
+            this.completedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.completedToolStripMenuItem.Text = "Completed";
+            this.completedToolStripMenuItem.Click += new System.EventHandler(this.completedToolStripMenuItem_Click);
             // 
             // equipmentTransactionsToolStripMenuItem
             // 
@@ -142,6 +149,20 @@
             this.equipmentTransactionsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentTransactionsToolStripMenuItem.Text = "Equipment Transactions";
             this.equipmentTransactionsToolStripMenuItem.Click += new System.EventHandler(this.equipmentTransactionsToolStripMenuItem_Click);
+            // 
+            // borrowToolStripMenuItem
+            // 
+            this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrowToolStripMenuItem.Text = "Borrow";
+            this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // returnToHomeToolStripMenuItem
             // 
@@ -164,24 +185,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(984, 537);
             this.reportViewer1.TabIndex = 5;
-            // 
-            // borrowToolStripMenuItem
-            // 
-            this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
-            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.borrowToolStripMenuItem.Text = "Borrow";
-            // 
-            // returnToolStripMenuItem
-            // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            this.returnToolStripMenuItem.Text = "Return";
-            // 
-            // completedToolStripMenuItem
-            // 
-            this.completedToolStripMenuItem.Name = "completedToolStripMenuItem";
-            this.completedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.completedToolStripMenuItem.Text = "Completed";
             // 
             // FormAdminReports
             // 

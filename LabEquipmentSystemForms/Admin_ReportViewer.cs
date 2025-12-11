@@ -63,34 +63,51 @@ namespace LabEquipmentSystemForms
 
         private void equipmentRequestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DisplayEquipmentRequests("all");
+            DisplayEquipmentRequests();
         }
 
         private void pendingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DisplayEquipmentRequests("pending");
+            DisplayEquipmentRequests("PENDING");
         }
 
         private void approvedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DisplayEquipmentRequests("approved");
+            DisplayEquipmentRequests("APPROVED");
         }
 
         private void deniedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DisplayEquipmentRequests("denied");
+            DisplayEquipmentRequests("DENIED");
+        }
+        private void completedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayEquipmentRequests("COMPLETED");
         }
 
         private void equipmentTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentTransactions", DataAccess.ViewEquipmentTransactions());
-            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_EquipmentTransactions.rdlc";
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.RefreshReport();
+            DisplayEquipmentTransactions();
         }
 
-        private void DisplayEquipmentRequests(string status)
+        private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayEquipmentTransactions("BORROW");
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayEquipmentTransactions("RETURN");
+        }
+        private void returnToHomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminHome homeForm = new FormAdminHome(adminID);
+            homeForm.Show();
+            this.Close();
+            homeForm.Focus();
+        }
+
+        private void DisplayEquipmentRequests(string status = "")
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentRequests", DataAccess.ViewEquipmentRequests(status));
@@ -99,12 +116,14 @@ namespace LabEquipmentSystemForms
             reportViewer1.RefreshReport();
         }
 
-        private void returnToHomeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DisplayEquipmentTransactions(string type = "")
         {
-            FormAdminHome homeForm = new FormAdminHome(adminID);
-            homeForm.Show();
-            this.Close();
-            homeForm.Focus();
+            reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentTransactions", DataAccess.ViewEquipmentTransactions(type));
+            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_EquipmentTransactions.rdlc";
+            reportViewer1.LocalReport.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
         }
+
     }
 }
