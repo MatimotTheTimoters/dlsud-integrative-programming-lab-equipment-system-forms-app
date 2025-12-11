@@ -1,14 +1,15 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using DataHelper;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataHelper;
 
 namespace LabEquipmentSystemForms
 {
@@ -46,7 +47,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewStudents", DataAccess.ViewStudents());
-            reportViewer1.LocalReport.ReportPath = rdlcPath;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Admin_Report_Students.rdlc"); ;
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }
@@ -55,7 +56,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipment", DataAccess.ViewEquipment());
-            reportViewer1.LocalReport.ReportPath = rdlcPath;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Admin_Report_Equipment.rdlc"); ; ;
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }

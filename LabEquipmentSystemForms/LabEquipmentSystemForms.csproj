@@ -213,7 +213,8 @@
     <EmbeddedResource Include="Admin_RecoverPassword.resx">
       <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_DataSetEditor.rdlc" />
+    <EmbeddedResource Include="Admin_Report_Equipment.rdlc" />
+    <EmbeddedResource Include="Admin_Report_Students.rdlc" />
     <EmbeddedResource Include="Admin_ReportViewer.resx">
       <DependentUpon>Admin_ReportViewer.cs</DependentUpon>
     </EmbeddedResource>
