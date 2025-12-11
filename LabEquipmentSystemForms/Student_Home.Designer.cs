@@ -39,7 +39,6 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.welcomeMessageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -54,7 +53,7 @@
             this.inventoryMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(90, 537);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 537);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +63,7 @@
             this.makeNewRequestMenuItem,
             this.viewMyRequestsMenuItem});
             this.requestsMenuItem.Name = "requestsMenuItem";
-            this.requestsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.requestsMenuItem.Size = new System.Drawing.Size(113, 19);
             this.requestsMenuItem.Text = "Requests";
             // 
             // makeNewRequestMenuItem
@@ -86,7 +85,7 @@
             this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewMyTransactionsMenuItem});
             this.transactionsMenuItem.Name = "transactionsMenuItem";
-            this.transactionsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.transactionsMenuItem.Size = new System.Drawing.Size(113, 19);
             this.transactionsMenuItem.Text = "Transactions";
             // 
             // viewMyTransactionsMenuItem
@@ -99,7 +98,7 @@
             // inventoryMenuItem
             // 
             this.inventoryMenuItem.Name = "inventoryMenuItem";
-            this.inventoryMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.inventoryMenuItem.Size = new System.Drawing.Size(113, 19);
             this.inventoryMenuItem.Text = "Inventory";
             this.inventoryMenuItem.Click += new System.EventHandler(this.inventoryMenuItem_Click);
             // 
@@ -107,8 +106,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeMessageMenuItem,
-            this.timeMenuItem,
-            this.logoutMenuItem});
+            this.timeMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(984, 24);
@@ -126,17 +124,6 @@
             this.timeMenuItem.Name = "timeMenuItem";
             this.timeMenuItem.Size = new System.Drawing.Size(51, 20);
             this.timeMenuItem.Text = "[time]";
-            // 
-            // logoutMenuItem
-            // 
-            this.logoutMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.logoutMenuItem.BackColor = System.Drawing.Color.Firebrick;
-            this.logoutMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.logoutMenuItem.Name = "logoutMenuItem";
-            this.logoutMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.logoutMenuItem.Text = "LOGOUT";
-            this.logoutMenuItem.Click += new System.EventHandler(this.logoutMenuItem_Click);
             // 
             // timer1
             // 
@@ -173,7 +160,6 @@
         private System.Windows.Forms.ToolStripMenuItem welcomeMessageMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timeMenuItem;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ToolStripMenuItem logoutMenuItem;
         private System.Windows.Forms.ToolStripMenuItem requestsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem makeNewRequestMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMyRequestsMenuItem;

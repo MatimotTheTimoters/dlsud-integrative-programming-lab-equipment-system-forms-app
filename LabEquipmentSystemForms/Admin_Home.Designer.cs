@@ -46,7 +46,6 @@
             this.welcomeMessageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.logoutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -161,8 +160,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeMessageMenuItem,
-            this.timeMenuItem,
-            this.logoutMenuItem});
+            this.timeMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(980, 24);
@@ -186,17 +184,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // logoutMenuItem
-            // 
-            this.logoutMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.logoutMenuItem.BackColor = System.Drawing.Color.Firebrick;
-            this.logoutMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.logoutMenuItem.Name = "logoutMenuItem";
-            this.logoutMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.logoutMenuItem.Text = "LOGOUT";
-            this.logoutMenuItem.Click += new System.EventHandler(this.logoutMenuItem_Click);
             // 
             // FormAdminHome
             // 
@@ -239,6 +226,5 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem passwordRecoveryMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutMenuItem;
     }
 }
