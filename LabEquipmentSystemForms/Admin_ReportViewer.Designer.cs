@@ -32,12 +32,16 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.welcomeMessageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.approvedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deniedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,11 +70,6 @@
             this.timeMenuItem.Text = "[time]";
             this.timeMenuItem.Click += new System.EventHandler(this.timeMenuItem_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            // 
             // filterToolStripMenuItem
             // 
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -87,33 +86,77 @@
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
             this.studentsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.studentsToolStripMenuItem.Text = "Students";
+            this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
             // equipmentToolStripMenuItem
             // 
             this.equipmentToolStripMenuItem.Name = "equipmentToolStripMenuItem";
             this.equipmentToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentToolStripMenuItem.Text = "Equipment";
+            this.equipmentToolStripMenuItem.Click += new System.EventHandler(this.equipmentToolStripMenuItem_Click);
             // 
             // equipmentRequestsToolStripMenuItem
             // 
+            this.equipmentRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pendingToolStripMenuItem,
+            this.approvedToolStripMenuItem,
+            this.deniedToolStripMenuItem});
             this.equipmentRequestsToolStripMenuItem.Name = "equipmentRequestsToolStripMenuItem";
             this.equipmentRequestsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentRequestsToolStripMenuItem.Text = "Equipment Requests";
+            this.equipmentRequestsToolStripMenuItem.Click += new System.EventHandler(this.equipmentRequestsToolStripMenuItem_Click);
+            // 
+            // pendingToolStripMenuItem
+            // 
+            this.pendingToolStripMenuItem.Name = "pendingToolStripMenuItem";
+            this.pendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pendingToolStripMenuItem.Text = "Pending";
+            this.pendingToolStripMenuItem.Click += new System.EventHandler(this.pendingToolStripMenuItem_Click);
+            // 
+            // approvedToolStripMenuItem
+            // 
+            this.approvedToolStripMenuItem.Name = "approvedToolStripMenuItem";
+            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.approvedToolStripMenuItem.Text = "Approved";
+            this.approvedToolStripMenuItem.Click += new System.EventHandler(this.approvedToolStripMenuItem_Click);
+            // 
+            // deniedToolStripMenuItem
+            // 
+            this.deniedToolStripMenuItem.Name = "deniedToolStripMenuItem";
+            this.deniedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deniedToolStripMenuItem.Text = "Denied";
+            this.deniedToolStripMenuItem.Click += new System.EventHandler(this.deniedToolStripMenuItem_Click);
             // 
             // equipmentTransactionsToolStripMenuItem
             // 
             this.equipmentTransactionsToolStripMenuItem.Name = "equipmentTransactionsToolStripMenuItem";
             this.equipmentTransactionsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentTransactionsToolStripMenuItem.Text = "Equipment Transactions";
+            this.equipmentTransactionsToolStripMenuItem.Click += new System.EventHandler(this.equipmentTransactionsToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LabEquipmentSystemForms.Admin_DataSetEditor.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 24);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(984, 537);
+            this.reportViewer1.TabIndex = 5;
             // 
             // FormAdminReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.menuStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.IsMdiContainer = true;
             this.Name = "FormAdminReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
@@ -136,5 +179,9 @@
         private System.Windows.Forms.ToolStripMenuItem equipmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipmentRequestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipmentTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem approvedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deniedToolStripMenuItem;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
