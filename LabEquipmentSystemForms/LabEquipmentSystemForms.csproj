@@ -214,6 +214,8 @@
       <DependentUpon>Admin_RecoverPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Report_Equipment.rdlc" />
+    <EmbeddedResource Include="Admin_Report_EquipmentRequests.rdlc" />
+    <EmbeddedResource Include="Admin_Report_EquipmentTransactions.rdlc" />
     <EmbeddedResource Include="Admin_Report_Students.rdlc" />
     <EmbeddedResource Include="Admin_ReportViewer.resx">
       <DependentUpon>Admin_ReportViewer.cs</DependentUpon>

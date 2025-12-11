@@ -47,7 +47,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewStudents", DataAccess.ViewStudents());
-            reportViewer1.LocalReport.ReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Admin_Report_Students.rdlc"); ;
+            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_Students.rdlc";
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }
@@ -56,7 +56,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipment", DataAccess.ViewEquipment());
-            reportViewer1.LocalReport.ReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Admin_Report_Equipment.rdlc"); ; ;
+            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_Equipment.rdlc";
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }
@@ -85,7 +85,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentTransactions", DataAccess.ViewEquipmentTransactions());
-            reportViewer1.LocalReport.ReportPath = rdlcPath;
+            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_EquipmentTransactions.rdlc";
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }
@@ -94,7 +94,7 @@ namespace LabEquipmentSystemForms
         {
             reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetViewEquipmentRequests", DataAccess.ViewEquipmentRequests(status));
-            reportViewer1.LocalReport.ReportPath = rdlcPath;
+            reportViewer1.LocalReport.ReportPath = $@"C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\Admin_Report_EquipmentRequests.rdlc";
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
         }
