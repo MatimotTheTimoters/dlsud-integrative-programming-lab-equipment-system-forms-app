@@ -11,7 +11,7 @@ namespace DataHelper
 {
     public class DataAccess
     {
-        public static string conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\source\repos\BIT34_StaAna_IntegProg_LabEquipmentSystem\LabEquipmentSystemForms\MasterDB.mdf;Integrated Security=True";
+        public static string conStr = $@"YourConnectionString";
 
 
 
@@ -216,12 +216,13 @@ namespace DataHelper
             }
         }
 
-        public static DataTable ViewEquipmentTransactions()
+        public static DataTable ViewEquipmentTransactions(string transactionType = "all")
         {
             using (SqlConnection sqlCon = new SqlConnection(conStr))
             {
                 SqlDataAdapter da = new SqlDataAdapter("Admin_ViewEquipmentTransactions", sqlCon);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@TransactionType", transactionType);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;

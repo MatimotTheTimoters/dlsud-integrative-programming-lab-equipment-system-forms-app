@@ -48,7 +48,7 @@
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblFilter.Location = new System.Drawing.Point(3, 0);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(214, 45);
@@ -60,7 +60,7 @@
             // 
             this.lblReturnAmount.AutoSize = true;
             this.lblReturnAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblReturnAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturnAmount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblReturnAmount.Location = new System.Drawing.Point(3, 90);
             this.lblReturnAmount.Name = "lblReturnAmount";
             this.lblReturnAmount.Size = new System.Drawing.Size(214, 45);
@@ -80,7 +80,7 @@
             // cbFilter
             // 
             this.cbFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cbFilter.FormattingEnabled = true;
             this.cbFilter.Items.AddRange(new object[] {
             "All",
@@ -133,7 +133,7 @@
             // 
             this.lblEquipmentId.AutoSize = true;
             this.lblEquipmentId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblEquipmentId.Location = new System.Drawing.Point(3, 45);
             this.lblEquipmentId.Name = "lblEquipmentId";
             this.lblEquipmentId.Size = new System.Drawing.Size(214, 45);
@@ -157,10 +157,10 @@
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.Location = new System.Drawing.Point(3, 3);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(106, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(120, 34);
             this.btnRefresh.TabIndex = 16;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -171,8 +171,8 @@
             this.btnReturn.AutoSize = true;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(115, 3);
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnReturn.Location = new System.Drawing.Point(129, 3);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(202, 34);
             this.btnReturn.TabIndex = 17;

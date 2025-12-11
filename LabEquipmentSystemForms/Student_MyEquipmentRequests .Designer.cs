@@ -74,7 +74,7 @@
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.Location = new System.Drawing.Point(271, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(106, 34);
@@ -88,7 +88,7 @@
             this.btnOpen.AutoSize = true;
             this.btnOpen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnOpen.Location = new System.Drawing.Point(383, 3);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(202, 34);
@@ -101,7 +101,7 @@
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblFilter.Location = new System.Drawing.Point(3, 0);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(215, 46);

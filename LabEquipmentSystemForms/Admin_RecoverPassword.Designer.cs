@@ -83,10 +83,10 @@
             this.btnEdit.AutoSize = true;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Location = new System.Drawing.Point(3, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 39);
+            this.btnEdit.Size = new System.Drawing.Size(120, 39);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Enabled = false;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(109, 3);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Location = new System.Drawing.Point(129, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 39);
+            this.btnSave.Size = new System.Drawing.Size(120, 39);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -113,10 +113,10 @@
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Enabled = false;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(215, 3);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Location = new System.Drawing.Point(255, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 39);
+            this.btnCancel.Size = new System.Drawing.Size(120, 39);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -125,18 +125,18 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtPassword.Location = new System.Drawing.Point(223, 69);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(654, 33);
+            this.txtPassword.Size = new System.Drawing.Size(654, 32);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblPassword.Location = new System.Drawing.Point(3, 57);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(214, 57);
@@ -148,7 +148,7 @@
             // 
             this.lblStudentId.AutoSize = true;
             this.lblStudentId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStudentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentId.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblStudentId.Location = new System.Drawing.Point(3, 0);
             this.lblStudentId.Name = "lblStudentId";
             this.lblStudentId.Size = new System.Drawing.Size(214, 57);
@@ -159,11 +159,11 @@
             // txtStudentId
             // 
             this.txtStudentId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStudentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentId.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtStudentId.Location = new System.Drawing.Point(223, 12);
             this.txtStudentId.Name = "txtStudentId";
             this.txtStudentId.ReadOnly = true;
-            this.txtStudentId.Size = new System.Drawing.Size(654, 33);
+            this.txtStudentId.Size = new System.Drawing.Size(654, 32);
             this.txtStudentId.TabIndex = 1;
             // 
             // dataGridView

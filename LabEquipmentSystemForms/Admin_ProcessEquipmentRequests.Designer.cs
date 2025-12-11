@@ -110,7 +110,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(271, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.Size = new System.Drawing.Size(120, 34);
             this.button1.TabIndex = 17;
             this.button1.Text = "APPROVE";
             this.button1.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             this.button2.AutoSize = true;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(389, 3);
+            this.button2.Location = new System.Drawing.Point(397, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 34);
+            this.button2.Size = new System.Drawing.Size(120, 34);
             this.button2.TabIndex = 18;
             this.button2.Text = "DENY";
             this.button2.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblFilter.Location = new System.Drawing.Point(3, 138);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(215, 46);
@@ -145,7 +145,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblQuantity.Location = new System.Drawing.Point(3, 92);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(215, 46);
@@ -156,18 +156,18 @@
             // txtStudentID
             // 
             this.txtStudentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStudentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentID.Location = new System.Drawing.Point(224, 49);
+            this.txtStudentID.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtStudentID.Location = new System.Drawing.Point(224, 51);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(657, 43);
+            this.txtStudentID.Size = new System.Drawing.Size(657, 36);
             this.txtStudentID.TabIndex = 4;
             // 
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
             this.lblStudentID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStudentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentID.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblStudentID.Location = new System.Drawing.Point(3, 46);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(215, 46);
@@ -178,18 +178,18 @@
             // txtEquipmentID
             // 
             this.txtEquipmentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEquipmentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipmentID.Location = new System.Drawing.Point(224, 3);
+            this.txtEquipmentID.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtEquipmentID.Location = new System.Drawing.Point(224, 5);
             this.txtEquipmentID.Name = "txtEquipmentID";
             this.txtEquipmentID.ReadOnly = true;
-            this.txtEquipmentID.Size = new System.Drawing.Size(657, 43);
+            this.txtEquipmentID.Size = new System.Drawing.Size(657, 36);
             this.txtEquipmentID.TabIndex = 2;
             // 
             // lblEquipmentID
             // 
             this.lblEquipmentID.AutoSize = true;
             this.lblEquipmentID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblEquipmentID.Location = new System.Drawing.Point(3, 0);
             this.lblEquipmentID.Name = "lblEquipmentID";
             this.lblEquipmentID.Size = new System.Drawing.Size(215, 46);
@@ -212,11 +212,11 @@
             // nudQuantity
             // 
             this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.nudQuantity.Location = new System.Drawing.Point(224, 95);
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.nudQuantity.Location = new System.Drawing.Point(224, 97);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ReadOnly = true;
-            this.nudQuantity.Size = new System.Drawing.Size(657, 43);
+            this.nudQuantity.Size = new System.Drawing.Size(657, 36);
             this.nudQuantity.TabIndex = 7;
             this.nudQuantity.Value = new decimal(new int[] {
             10,

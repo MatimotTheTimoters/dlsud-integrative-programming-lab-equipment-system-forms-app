@@ -51,11 +51,11 @@
             // txtEquipmentId
             // 
             this.txtEquipmentId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipmentId.Location = new System.Drawing.Point(224, 6);
+            this.txtEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtEquipmentId.Location = new System.Drawing.Point(224, 7);
             this.txtEquipmentId.Name = "txtEquipmentId";
             this.txtEquipmentId.ReadOnly = true;
-            this.txtEquipmentId.Size = new System.Drawing.Size(657, 33);
+            this.txtEquipmentId.Size = new System.Drawing.Size(657, 32);
             this.txtEquipmentId.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -74,10 +74,10 @@
             this.btnEdit.AutoSize = true;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Location = new System.Drawing.Point(3, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 39);
+            this.btnEdit.Size = new System.Drawing.Size(120, 39);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Enabled = false;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(109, 3);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Location = new System.Drawing.Point(129, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 39);
+            this.btnSave.Size = new System.Drawing.Size(120, 39);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -104,10 +104,10 @@
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Enabled = false;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(215, 3);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Location = new System.Drawing.Point(255, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 39);
+            this.btnCancel.Size = new System.Drawing.Size(120, 39);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 46);
@@ -158,7 +158,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 46);
@@ -169,18 +169,18 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(224, 52);
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtName.Location = new System.Drawing.Point(224, 53);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(657, 33);
+            this.txtName.Size = new System.Drawing.Size(657, 32);
             this.txtName.TabIndex = 3;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblName.Location = new System.Drawing.Point(3, 46);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(215, 46);
@@ -192,7 +192,7 @@
             // 
             this.lblEquipmentID.AutoSize = true;
             this.lblEquipmentID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblEquipmentID.Location = new System.Drawing.Point(3, 0);
             this.lblEquipmentID.Name = "lblEquipmentID";
             this.lblEquipmentID.Size = new System.Drawing.Size(215, 46);
@@ -203,11 +203,11 @@
             // nudQuantity
             // 
             this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(224, 98);
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.nudQuantity.Location = new System.Drawing.Point(224, 99);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ReadOnly = true;
-            this.nudQuantity.Size = new System.Drawing.Size(657, 33);
+            this.nudQuantity.Size = new System.Drawing.Size(657, 32);
             this.nudQuantity.TabIndex = 6;
             this.nudQuantity.Value = new decimal(new int[] {
             10,

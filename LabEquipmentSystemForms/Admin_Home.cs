@@ -88,5 +88,12 @@ namespace LabEquipmentSystemForms
             }
         }
 
+        private void reportsMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminReports formAdminReports = new FormAdminReports(adminID);
+            formAdminReports.Show();
+            this.Close();
+            formAdminReports.Focus();
+        }
     }
 }
