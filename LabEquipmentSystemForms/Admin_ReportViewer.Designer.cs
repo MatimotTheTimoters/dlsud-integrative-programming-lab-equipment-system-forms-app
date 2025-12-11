@@ -40,9 +40,12 @@
             this.approvedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deniedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipmentTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.returnToHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.completedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +105,8 @@
             this.equipmentRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pendingToolStripMenuItem,
             this.approvedToolStripMenuItem,
-            this.deniedToolStripMenuItem});
+            this.deniedToolStripMenuItem,
+            this.completedToolStripMenuItem});
             this.equipmentRequestsToolStripMenuItem.Name = "equipmentRequestsToolStripMenuItem";
             this.equipmentRequestsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentRequestsToolStripMenuItem.Text = "Equipment Requests";
@@ -111,30 +115,40 @@
             // pendingToolStripMenuItem
             // 
             this.pendingToolStripMenuItem.Name = "pendingToolStripMenuItem";
-            this.pendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pendingToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.pendingToolStripMenuItem.Text = "Pending";
             this.pendingToolStripMenuItem.Click += new System.EventHandler(this.pendingToolStripMenuItem_Click);
             // 
             // approvedToolStripMenuItem
             // 
             this.approvedToolStripMenuItem.Name = "approvedToolStripMenuItem";
-            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.approvedToolStripMenuItem.Text = "Approved";
             this.approvedToolStripMenuItem.Click += new System.EventHandler(this.approvedToolStripMenuItem_Click);
             // 
             // deniedToolStripMenuItem
             // 
             this.deniedToolStripMenuItem.Name = "deniedToolStripMenuItem";
-            this.deniedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deniedToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.deniedToolStripMenuItem.Text = "Denied";
             this.deniedToolStripMenuItem.Click += new System.EventHandler(this.deniedToolStripMenuItem_Click);
             // 
             // equipmentTransactionsToolStripMenuItem
             // 
+            this.equipmentTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.borrowToolStripMenuItem,
+            this.returnToolStripMenuItem});
             this.equipmentTransactionsToolStripMenuItem.Name = "equipmentTransactionsToolStripMenuItem";
             this.equipmentTransactionsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.equipmentTransactionsToolStripMenuItem.Text = "Equipment Transactions";
             this.equipmentTransactionsToolStripMenuItem.Click += new System.EventHandler(this.equipmentTransactionsToolStripMenuItem_Click);
+            // 
+            // returnToHomeToolStripMenuItem
+            // 
+            this.returnToHomeToolStripMenuItem.Name = "returnToHomeToolStripMenuItem";
+            this.returnToHomeToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.returnToHomeToolStripMenuItem.Text = "Return to Home";
+            this.returnToHomeToolStripMenuItem.Click += new System.EventHandler(this.returnToHomeToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -151,12 +165,23 @@
             this.reportViewer1.Size = new System.Drawing.Size(984, 537);
             this.reportViewer1.TabIndex = 5;
             // 
-            // returnToHomeToolStripMenuItem
+            // borrowToolStripMenuItem
             // 
-            this.returnToHomeToolStripMenuItem.Name = "returnToHomeToolStripMenuItem";
-            this.returnToHomeToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.returnToHomeToolStripMenuItem.Text = "Return to Home";
-            this.returnToHomeToolStripMenuItem.Click += new System.EventHandler(this.returnToHomeToolStripMenuItem_Click);
+            this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrowToolStripMenuItem.Text = "Borrow";
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.returnToolStripMenuItem.Text = "Return";
+            // 
+            // completedToolStripMenuItem
+            // 
+            this.completedToolStripMenuItem.Name = "completedToolStripMenuItem";
+            this.completedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.completedToolStripMenuItem.Text = "Completed";
             // 
             // FormAdminReports
             // 
@@ -193,5 +218,8 @@
         private System.Windows.Forms.ToolStripMenuItem deniedToolStripMenuItem;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.ToolStripMenuItem returnToHomeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem completedToolStripMenuItem;
     }
 }
