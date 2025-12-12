@@ -51,6 +51,7 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeMessageMenuItem,
             this.timeMenuItem,
@@ -64,14 +65,18 @@
             // 
             // welcomeMessageMenuItem
             // 
+            this.welcomeMessageMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.welcomeMessageMenuItem.ForeColor = System.Drawing.Color.White;
             this.welcomeMessageMenuItem.Name = "welcomeMessageMenuItem";
-            this.welcomeMessageMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.welcomeMessageMenuItem.Size = new System.Drawing.Size(126, 20);
             this.welcomeMessageMenuItem.Text = "[welcomeMessage]";
             // 
             // timeMenuItem
             // 
+            this.timeMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.timeMenuItem.ForeColor = System.Drawing.Color.White;
             this.timeMenuItem.Name = "timeMenuItem";
-            this.timeMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.timeMenuItem.Size = new System.Drawing.Size(53, 20);
             this.timeMenuItem.Text = "[time]";
             this.timeMenuItem.Click += new System.EventHandler(this.timeMenuItem_Click);
             // 
@@ -82,38 +87,48 @@
             this.equipmentToolStripMenuItem,
             this.equipmentRequestsToolStripMenuItem,
             this.equipmentTransactionsToolStripMenuItem});
+            this.filterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.filterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
-            this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.filterToolStripMenuItem.Text = "Filter";
             // 
             // studentsToolStripMenuItem
             // 
+            this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.studentsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
             // equipmentToolStripMenuItem
             // 
+            this.equipmentToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.equipmentToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equipmentToolStripMenuItem.Name = "equipmentToolStripMenuItem";
-            this.equipmentToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.equipmentToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.equipmentToolStripMenuItem.Text = "Equipment";
             this.equipmentToolStripMenuItem.Click += new System.EventHandler(this.equipmentToolStripMenuItem_Click);
             // 
             // equipmentRequestsToolStripMenuItem
             // 
+            this.equipmentRequestsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.equipmentRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pendingToolStripMenuItem,
             this.approvedToolStripMenuItem,
             this.deniedToolStripMenuItem,
             this.completedToolStripMenuItem});
+            this.equipmentRequestsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equipmentRequestsToolStripMenuItem.Name = "equipmentRequestsToolStripMenuItem";
-            this.equipmentRequestsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.equipmentRequestsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.equipmentRequestsToolStripMenuItem.Text = "Equipment Requests";
             this.equipmentRequestsToolStripMenuItem.Click += new System.EventHandler(this.equipmentRequestsToolStripMenuItem_Click);
             // 
             // pendingToolStripMenuItem
             // 
+            this.pendingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.pendingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pendingToolStripMenuItem.Name = "pendingToolStripMenuItem";
             this.pendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pendingToolStripMenuItem.Text = "Pending";
@@ -121,6 +136,8 @@
             // 
             // approvedToolStripMenuItem
             // 
+            this.approvedToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.approvedToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.approvedToolStripMenuItem.Name = "approvedToolStripMenuItem";
             this.approvedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.approvedToolStripMenuItem.Text = "Approved";
@@ -128,6 +145,8 @@
             // 
             // deniedToolStripMenuItem
             // 
+            this.deniedToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.deniedToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.deniedToolStripMenuItem.Name = "deniedToolStripMenuItem";
             this.deniedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deniedToolStripMenuItem.Text = "Denied";
@@ -135,6 +154,8 @@
             // 
             // completedToolStripMenuItem
             // 
+            this.completedToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.completedToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.completedToolStripMenuItem.Name = "completedToolStripMenuItem";
             this.completedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.completedToolStripMenuItem.Text = "Completed";
@@ -142,16 +163,20 @@
             // 
             // equipmentTransactionsToolStripMenuItem
             // 
+            this.equipmentTransactionsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.equipmentTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.borrowToolStripMenuItem,
             this.returnToolStripMenuItem});
+            this.equipmentTransactionsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equipmentTransactionsToolStripMenuItem.Name = "equipmentTransactionsToolStripMenuItem";
-            this.equipmentTransactionsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.equipmentTransactionsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.equipmentTransactionsToolStripMenuItem.Text = "Equipment Transactions";
             this.equipmentTransactionsToolStripMenuItem.Click += new System.EventHandler(this.equipmentTransactionsToolStripMenuItem_Click);
             // 
             // borrowToolStripMenuItem
             // 
+            this.borrowToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.borrowToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
             this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.borrowToolStripMenuItem.Text = "Borrow";
@@ -159,6 +184,8 @@
             // 
             // returnToolStripMenuItem
             // 
+            this.returnToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.returnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
             this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.returnToolStripMenuItem.Text = "Return";
@@ -166,8 +193,11 @@
             // 
             // returnToHomeToolStripMenuItem
             // 
+            this.returnToHomeToolStripMenuItem.BackColor = System.Drawing.Color.Maroon;
+            this.returnToHomeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.returnToHomeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.returnToHomeToolStripMenuItem.Name = "returnToHomeToolStripMenuItem";
-            this.returnToHomeToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.returnToHomeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.returnToHomeToolStripMenuItem.Text = "Return to Home";
             this.returnToHomeToolStripMenuItem.Click += new System.EventHandler(this.returnToHomeToolStripMenuItem_Click);
             // 

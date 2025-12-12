@@ -16,7 +16,7 @@ namespace LabEquipmentSystemForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLoginHome());
+            Application.Run(new FormStartupSplashScreen());
         }
     }
 }

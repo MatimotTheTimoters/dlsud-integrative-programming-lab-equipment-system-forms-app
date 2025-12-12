@@ -52,6 +52,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentMenuItem,
@@ -60,7 +61,7 @@
             this.reportsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(90, 533);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 533);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,28 +71,36 @@
             this.addNewStudentMenuItem,
             this.viewStudentsMenuItem,
             this.passwordRecoveryMenuItem});
+            this.studentMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentMenuItem.ForeColor = System.Drawing.Color.White;
             this.studentMenuItem.Name = "studentMenuItem";
-            this.studentMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.studentMenuItem.Size = new System.Drawing.Size(113, 19);
             this.studentMenuItem.Text = "Student";
             // 
             // addNewStudentMenuItem
             // 
+            this.addNewStudentMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.addNewStudentMenuItem.ForeColor = System.Drawing.Color.White;
             this.addNewStudentMenuItem.Name = "addNewStudentMenuItem";
-            this.addNewStudentMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.addNewStudentMenuItem.Size = new System.Drawing.Size(182, 22);
             this.addNewStudentMenuItem.Text = "Add New Student";
             this.addNewStudentMenuItem.Click += new System.EventHandler(this.addNewStudentMenuItem_Click);
             // 
             // viewStudentsMenuItem
             // 
+            this.viewStudentsMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.viewStudentsMenuItem.ForeColor = System.Drawing.Color.White;
             this.viewStudentsMenuItem.Name = "viewStudentsMenuItem";
-            this.viewStudentsMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewStudentsMenuItem.Size = new System.Drawing.Size(182, 22);
             this.viewStudentsMenuItem.Text = "View Students";
             this.viewStudentsMenuItem.Click += new System.EventHandler(this.viewStudentsMenuItem_Click);
             // 
             // passwordRecoveryMenuItem
             // 
+            this.passwordRecoveryMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.passwordRecoveryMenuItem.ForeColor = System.Drawing.Color.White;
             this.passwordRecoveryMenuItem.Name = "passwordRecoveryMenuItem";
-            this.passwordRecoveryMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.passwordRecoveryMenuItem.Size = new System.Drawing.Size(182, 22);
             this.passwordRecoveryMenuItem.Text = "Password Recovery";
             this.passwordRecoveryMenuItem.Click += new System.EventHandler(this.passwordRecoveryMenuItem_Click);
             // 
@@ -101,28 +110,36 @@
             this.addNewEquipmentMenuItem,
             this.viewEquipmentMenuItem,
             this.editEquipmentMenuItem});
+            this.equipmentMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentMenuItem.ForeColor = System.Drawing.Color.White;
             this.equipmentMenuItem.Name = "equipmentMenuItem";
-            this.equipmentMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.equipmentMenuItem.Size = new System.Drawing.Size(113, 19);
             this.equipmentMenuItem.Text = "Equipment";
             // 
             // addNewEquipmentMenuItem
             // 
+            this.addNewEquipmentMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.addNewEquipmentMenuItem.ForeColor = System.Drawing.Color.White;
             this.addNewEquipmentMenuItem.Name = "addNewEquipmentMenuItem";
-            this.addNewEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.addNewEquipmentMenuItem.Size = new System.Drawing.Size(188, 22);
             this.addNewEquipmentMenuItem.Text = "Add New Equipment";
             this.addNewEquipmentMenuItem.Click += new System.EventHandler(this.addNewEquipmentMenuItem_Click);
             // 
             // viewEquipmentMenuItem
             // 
+            this.viewEquipmentMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.viewEquipmentMenuItem.ForeColor = System.Drawing.Color.White;
             this.viewEquipmentMenuItem.Name = "viewEquipmentMenuItem";
-            this.viewEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.viewEquipmentMenuItem.Size = new System.Drawing.Size(188, 22);
             this.viewEquipmentMenuItem.Text = "View Equipment";
             this.viewEquipmentMenuItem.Click += new System.EventHandler(this.viewEquipmentMenuItem_Click);
             // 
             // editEquipmentMenuItem
             // 
+            this.editEquipmentMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.editEquipmentMenuItem.ForeColor = System.Drawing.Color.White;
             this.editEquipmentMenuItem.Name = "editEquipmentMenuItem";
-            this.editEquipmentMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.editEquipmentMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editEquipmentMenuItem.Text = "Edit Equipment";
             this.editEquipmentMenuItem.Click += new System.EventHandler(this.editEquipmentMenuItem_Click);
             // 
@@ -131,33 +148,42 @@
             this.transactionsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.processRequestsMenuItem,
             this.viewTransactionsMenuItem});
+            this.transactionsMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionsMenuItem.ForeColor = System.Drawing.Color.White;
             this.transactionsMenuItem.Name = "transactionsMenuItem";
-            this.transactionsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.transactionsMenuItem.Size = new System.Drawing.Size(113, 19);
             this.transactionsMenuItem.Text = "Transactions";
             // 
             // processRequestsMenuItem
             // 
+            this.processRequestsMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.processRequestsMenuItem.ForeColor = System.Drawing.Color.White;
             this.processRequestsMenuItem.Name = "processRequestsMenuItem";
-            this.processRequestsMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.processRequestsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.processRequestsMenuItem.Text = "Process Requests";
             this.processRequestsMenuItem.Click += new System.EventHandler(this.processRequestsMenuItem_Click);
             // 
             // viewTransactionsMenuItem
             // 
+            this.viewTransactionsMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.viewTransactionsMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.viewTransactionsMenuItem.Name = "viewTransactionsMenuItem";
-            this.viewTransactionsMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.viewTransactionsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewTransactionsMenuItem.Text = "View Transactions";
             this.viewTransactionsMenuItem.Click += new System.EventHandler(this.viewTransactionsMenuItem_Click);
             // 
             // reportsMenuItem
             // 
+            this.reportsMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportsMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportsMenuItem.Name = "reportsMenuItem";
-            this.reportsMenuItem.Size = new System.Drawing.Size(77, 19);
+            this.reportsMenuItem.Size = new System.Drawing.Size(113, 19);
             this.reportsMenuItem.Text = "Reports";
             this.reportsMenuItem.Click += new System.EventHandler(this.reportsMenuItem_Click);
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeMessageMenuItem,
             this.timeMenuItem});
@@ -169,14 +195,18 @@
             // 
             // welcomeMessageMenuItem
             // 
+            this.welcomeMessageMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeMessageMenuItem.ForeColor = System.Drawing.Color.White;
             this.welcomeMessageMenuItem.Name = "welcomeMessageMenuItem";
-            this.welcomeMessageMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.welcomeMessageMenuItem.Size = new System.Drawing.Size(126, 20);
             this.welcomeMessageMenuItem.Text = "[welcomeMessage]";
             // 
             // timeMenuItem
             // 
+            this.timeMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeMenuItem.ForeColor = System.Drawing.Color.White;
             this.timeMenuItem.Name = "timeMenuItem";
-            this.timeMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.timeMenuItem.Size = new System.Drawing.Size(53, 20);
             this.timeMenuItem.Text = "[time]";
             // 
             // timer1

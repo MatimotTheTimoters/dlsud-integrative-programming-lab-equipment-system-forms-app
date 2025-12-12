@@ -49,6 +49,7 @@
             this.lblFilter.AutoSize = true;
             this.lblFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblFilter.ForeColor = System.Drawing.Color.White;
             this.lblFilter.Location = new System.Drawing.Point(3, 0);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(214, 45);
@@ -61,6 +62,7 @@
             this.lblReturnAmount.AutoSize = true;
             this.lblReturnAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReturnAmount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblReturnAmount.ForeColor = System.Drawing.Color.White;
             this.lblReturnAmount.Location = new System.Drawing.Point(3, 90);
             this.lblReturnAmount.Name = "lblReturnAmount";
             this.lblReturnAmount.Size = new System.Drawing.Size(214, 45);
@@ -134,6 +136,7 @@
             this.lblEquipmentId.AutoSize = true;
             this.lblEquipmentId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblEquipmentId.ForeColor = System.Drawing.Color.White;
             this.lblEquipmentId.Location = new System.Drawing.Point(3, 45);
             this.lblEquipmentId.Name = "lblEquipmentId";
             this.lblEquipmentId.Size = new System.Drawing.Size(214, 45);
@@ -183,6 +186,7 @@
             // dataGridView
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 3);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -196,6 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(880, 457);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

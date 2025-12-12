@@ -42,15 +42,15 @@
             this.lblStudentID = new System.Windows.Forms.Label();
             this.txtStudentId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.pbProfilePicture = new System.Windows.Forms.PictureBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pbProfilePicture = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -139,6 +139,7 @@
             this.lblCourse.AutoSize = true;
             this.lblCourse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCourse.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblCourse.ForeColor = System.Drawing.Color.White;
             this.lblCourse.Location = new System.Drawing.Point(528, 120);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(169, 60);
@@ -151,6 +152,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblGender.ForeColor = System.Drawing.Color.White;
             this.lblGender.Location = new System.Drawing.Point(353, 120);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(169, 60);
@@ -163,6 +165,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblLastName.ForeColor = System.Drawing.Color.White;
             this.lblLastName.Location = new System.Drawing.Point(178, 120);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(169, 60);
@@ -175,6 +178,7 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblFirstName.ForeColor = System.Drawing.Color.White;
             this.lblFirstName.Location = new System.Drawing.Point(3, 120);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(169, 60);
@@ -187,6 +191,7 @@
             this.lblProfilePicture.AutoSize = true;
             this.lblProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblProfilePicture.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblProfilePicture.ForeColor = System.Drawing.Color.White;
             this.lblProfilePicture.Location = new System.Drawing.Point(353, 0);
             this.lblProfilePicture.Name = "lblProfilePicture";
             this.lblProfilePicture.Size = new System.Drawing.Size(169, 60);
@@ -199,6 +204,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(178, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(169, 60);
@@ -211,6 +217,7 @@
             this.lblStudentID.AutoSize = true;
             this.lblStudentID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStudentID.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblStudentID.ForeColor = System.Drawing.Color.White;
             this.lblStudentID.Location = new System.Drawing.Point(3, 0);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(169, 60);
@@ -235,17 +242,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(169, 36);
             this.txtPassword.TabIndex = 5;
-            // 
-            // pbProfilePicture
-            // 
-            this.pbProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbProfilePicture.Location = new System.Drawing.Point(528, 3);
-            this.pbProfilePicture.Name = "pbProfilePicture";
-            this.tableLayoutPanel1.SetRowSpan(this.pbProfilePicture, 2);
-            this.pbProfilePicture.Size = new System.Drawing.Size(169, 114);
-            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProfilePicture.TabIndex = 6;
-            this.pbProfilePicture.TabStop = false;
             // 
             // cbGender
             // 
@@ -303,10 +299,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pbProfilePicture
+            // 
+            this.pbProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbProfilePicture.Location = new System.Drawing.Point(528, 3);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.tableLayoutPanel1.SetRowSpan(this.pbProfilePicture, 2);
+            this.pbProfilePicture.Size = new System.Drawing.Size(169, 114);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProfilePicture.TabIndex = 6;
+            this.pbProfilePicture.TabStop = false;
+            // 
             // FormAdminAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -315,9 +323,9 @@
             this.Text = "Add New User";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.ResumeLayout(false);
 
         }
