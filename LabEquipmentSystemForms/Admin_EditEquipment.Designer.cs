@@ -147,6 +147,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 46);
@@ -159,6 +160,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 46);
@@ -181,6 +183,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(3, 46);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(215, 46);
@@ -193,6 +196,7 @@
             this.lblEquipmentID.AutoSize = true;
             this.lblEquipmentID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblEquipmentID.ForeColor = System.Drawing.Color.White;
             this.lblEquipmentID.Location = new System.Drawing.Point(3, 0);
             this.lblEquipmentID.Name = "lblEquipmentID";
             this.lblEquipmentID.Size = new System.Drawing.Size(215, 46);
@@ -229,6 +233,7 @@
             // dataGridView
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 2);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -242,6 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormAdminEditEquipment";

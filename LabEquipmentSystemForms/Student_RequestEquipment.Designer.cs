@@ -93,6 +93,7 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblQuantity.ForeColor = System.Drawing.Color.White;
             this.lblQuantity.Location = new System.Drawing.Point(3, 46);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(215, 46);
@@ -115,6 +116,7 @@
             this.lblEquipmentID.AutoSize = true;
             this.lblEquipmentID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEquipmentID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblEquipmentID.ForeColor = System.Drawing.Color.White;
             this.lblEquipmentID.Location = new System.Drawing.Point(3, 0);
             this.lblEquipmentID.Name = "lblEquipmentID";
             this.lblEquipmentID.Size = new System.Drawing.Size(215, 46);
@@ -124,6 +126,7 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 2);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormStudentRequestEquipment";

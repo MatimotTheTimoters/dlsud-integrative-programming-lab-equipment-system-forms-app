@@ -246,6 +246,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Startup_Splashscreen.resx">
       <DependentUpon>Startup_Splashscreen.cs</DependentUpon>
@@ -306,6 +307,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MasterDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

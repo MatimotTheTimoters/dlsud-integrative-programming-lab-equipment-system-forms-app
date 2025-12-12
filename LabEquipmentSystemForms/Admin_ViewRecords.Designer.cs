@@ -59,8 +59,10 @@
             // lblDataSource
             // 
             this.lblDataSource.AutoSize = true;
+            this.lblDataSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.lblDataSource.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDataSource.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblDataSource.ForeColor = System.Drawing.Color.White;
             this.lblDataSource.Location = new System.Drawing.Point(3, 0);
             this.lblDataSource.Name = "lblDataSource";
             this.lblDataSource.Size = new System.Drawing.Size(214, 45);
@@ -71,6 +73,7 @@
             // dataGridView
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView, 2);
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,6 +84,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.flowLayoutPanel1.Controls.Add(this.cbGender);
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(880, 457);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

@@ -42,6 +42,7 @@
             this.lblStudentId.AutoSize = true;
             this.lblStudentId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStudentId.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblStudentId.ForeColor = System.Drawing.Color.White;
             this.lblStudentId.Location = new System.Drawing.Point(3, 0);
             this.lblStudentId.Name = "lblStudentId";
             this.lblStudentId.Size = new System.Drawing.Size(169, 60);
@@ -84,6 +85,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(3, 60);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(169, 60);
@@ -117,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(880, 457);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
